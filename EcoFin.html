@@ -1,0 +1,2865 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EconLearn Hub - Kinh tế học & Tài chính | Học Tập Tương Tác</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="EconLearn Hub - Nền tảng học tập tương tác cho Kinh tế học và Tài chính. Học Supply & Demand, GDP, Time Value of Money và nhiều hơn nữa với các công cụ trực quan hóa.">
+    <meta name="keywords"
+        content="kinh tế học, tài chính, economics, finance, microeconomics, macroeconomics, supply demand, GDP, học trực tuyến, interactive learning">
+    <meta name="author" content="EconLearn Hub">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Vietnamese">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EconLearn Hub - Kinh tế học & Tài chính">
+    <meta property="og:description"
+        content="Nền tảng học tập tương tác cho Kinh tế học và Tài chính với visualization và công cụ tương tác.">
+    <meta property="og:locale" content="vi_VN">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EconLearn Hub - Kinh tế học & Tài chính">
+    <meta name="twitter:description" content="Nền tảng học tập tương tác cho Kinh tế học và Tài chính.">
+
+    <!-- Favicon (Emoji as data URI) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+
+    <!-- Theme Color for mobile browsers -->
+    <meta name="theme-color" content="#2c5aa0">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">📚 EconLearn Hub</div>
+            <nav class="tabs-container">
+                <ul class="nav-tabs">
+                    <li><button class="nav-btn active" data-section="dashboard">Tổng quan</button></li>
+                    <li><button class="nav-btn" data-section="microeconomics">Kinh tế Vi mô</button></li>
+                    <li><button class="nav-btn" data-section="macroeconomics">Kinh tế Vĩ mô</button></li>
+                    <li><button class="nav-btn" data-section="finance">Tài chính</button></li>
+                    <li><button class="nav-btn" data-section="mathematics">Toán học</button></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="dark-mode-toggle" id="darkModeToggle" title="Bật/Tắt Dark Mode"
+                    aria-label="Toggle dark mode">
+                    <span id="darkModeIcon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <h1>🎯 Bảng điều khiển học tập</h1>
+            <p>Chào mừng đến với EconLearn Hub - Nền tảng học tập tương tác cho Kinh tế học và Tài chính</p>
+
+            <div class="dashboard-grid">
+                <div class="card econ" onclick="switchSection('microeconomics')">
+                    <h3>💰 Kinh tế Vi mô</h3>
+                    <p>Supply &amp; Demand, Utility, Elasticity, và nhiều hơn nữa</p>
+                </div>
+                <div class="card econ" onclick="switchSection('macroeconomics')">
+                    <h3>🌍 Kinh tế Vĩ mô</h3>
+                    <p>GDP, Inflation, Interest Rates, Circular Flow</p>
+                </div>
+                <div class="card finance" onclick="switchSection('finance')">
+                    <h3>📈 Tài chính</h3>
+                    <p>Time Value of Money, Risk &amp; Return, Bonds &amp; Stocks</p>
+                </div>
+                <div class="card math" onclick="switchSection('mathematics')">
+                    <h3>∑ Toán học Nền tảng</h3>
+                    <p>Algebra, Calculus, Statistics cho kinh tế tế</p>
+                </div>
+            </div>
+
+            <div class="insight">
+                <strong>💡 Mẹo học tập:</strong> Bắt đầu với các khái niệm cơ bản rồi tiến dần đến các chủ đề nâng cao.
+                Sử dụng các công cụ tương tác để hiểu sâu hơn.
+            </div>
+        </section>
+
+        <!-- Microeconomics Section -->
+        <section id="microeconomics" class="section">
+            <div class="lesson-container">
+                <!-- Sidebar -->
+                <div class="lesson-sidebar">
+                    <h4>📖 Các bài học</h4>
+                    <ul class="lesson-list">
+                        <li class="lesson-item active" data-lesson="supply-demand">
+                            <strong>Supply &amp; Demand</strong>
+                            <small>Cơ bản</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="elasticity">
+                            <strong>Elasticity</strong>
+                            <small>Trung bình</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="utility">
+                            <strong>Consumer Utility</strong>
+                            <small>Trung bình</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="perfect-competition">
+                            <strong>Perfect Competition</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="monopoly">
+                            <strong>Monopoly</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="consumer-choice">
+                            <strong>Consumer Choice & Indifference</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="income-substitution">
+                            <strong>Income & Substitution Effect</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="production-cost">
+                            <strong>Production & Cost Curves</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="cournot-oligopoly">
+                            <strong>Cournot Oligopoly</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="externalities">
+                            <strong>Externalities & Pigouvian Tax</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Content -->
+                <div class="lesson-content">
+                    <!-- Supply & Demand -->
+                    <div class="lesson" id="lesson-supply-demand" style="display: block;">
+                        <h2>📊 Supply &amp; Demand</h2>
+
+                        <div class="concept-box">
+                            <h3>Định nghĩa cốt lõi</h3>
+                            <p><strong>Supply &amp; Demand</strong> là một trong những nguyên lý cơ bản nhất của kinh tế
+                                học, giải thích cách giá cả được xác định trên thị trường.</p>
+                        </div>
+
+                        <h3>📌 Demand (Cầu)</h3>
+                        <div class="definition">
+                            <strong>Cầu</strong> là lượng hàng hóa/dịch vụ mà người tiêu dùng sẵn sàng và có khả năng
+                            mua ở các mức giá khác nhau tại một thời điểm cụ thể.
+                        </div>
+
+                        <div class="concept-box highlight">
+                            <h4>Quy luật Cầu (Law of Demand)</h4>
+                            <p>Khi giá tăng → lượng cầu giảm (mối quan hệ nghịch)</p>
+                            <p>Khi giá giảm → lượng cầu tăng</p>
+                        </div>
+
+                        <h3>📌 Supply (Cung)</h3>
+                        <div class="definition">
+                            <strong>Cung</strong> là lượng hàng hóa/dịch vụ mà các nhà sản xuất sẵn sàng bán ở các mức
+                            giá khác nhau tại một thời điểm cụ thể.
+                        </div>
+
+                        <div class="concept-box">
+                            <h4>Quy luật Cung (Law of Supply)</h4>
+                            <p>Khi giá tăng → lượng cung tăng (mối quan hệ thuận)</p>
+                            <p>Khi giá giảm → lượng cung giảm</p>
+                        </div>
+
+                        <h3>💻 Mô phỏng tương tác: Cân bằng thị trường</h3>
+                        <div class="slider-group">
+                            <label>Điều chỉnh Demand (Cầu) - giá mong muốn:</label>
+                            <input type="range" id="demandSlider" min="1" max="100" value="70" step="1">
+                            <span class="slider-value" id="demandValue">70</span>
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Điều chỉnh Supply (Cung) - giá mong muốn:</label>
+                            <input type="range" id="supplySlider" min="1" max="100" value="40" step="1">
+                            <span class="slider-value" id="supplyValue">40</span>
+                        </div>
+
+                        <div class="visual-demo">
+                            <svg class="svg-container" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet">
+                                <!-- Grid -->
+                                <g stroke="#e0e0e0" stroke-width="1">
+                                    <line x1="50" y1="350" x2="450" y2="350" />
+                                    <line x1="50" y1="50" x2="50" y2="350" />
+                                </g>
+
+                                <!-- Axes labels -->
+                                <text x="460" y="355" font-size="14" fill="#666">Quantity</text>
+                                <text x="15" y="20" font-size="14" fill="#666">Price</text>
+
+                                <!-- Demand curve (line from top-left to bottom-right) -->
+                                <polyline id="demandCurve" points="50,50 250,200 450,350" stroke="#2c5aa0"
+                                    stroke-width="3" fill="none" />
+
+                                <!-- Supply curve (line from bottom-left to top-right) -->
+                                <polyline id="supplyCurve" points="50,350 250,150 450,50" stroke="#ff6b35"
+                                    stroke-width="3" fill="none" />
+
+                                <!-- Intersection point -->
+                                <circle id="equilibrium" cx="250" cy="200" r="6" fill="#04a777" stroke="#fff"
+                                    stroke-width="2" />
+
+                                <!-- Labels -->
+                                <text x="410" y="90" fill="#2c5aa0" font-weight="bold">Demand</text>
+                                <text x="380" y="160" fill="#ff6b35" font-weight="bold">Supply</text>
+                                <text x="270" y="185" fill="#04a777" font-weight="bold"
+                                    font-size="12">Equilibrium</text>
+                            </svg>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ thực tế: Thị trường Cà phê</strong>
+                            <div class="example-input">
+                                <p><strong>Tình huống 1:</strong> Mùa nông sản tốt → Cung cà phê tăng</p>
+                                <p style="margin-top: 8px; margin-bottom: 0;">→ Đường cung dịch sang phải → Giá cà phê
+                                    giảm → Người tiêu dùng mua nhiều hơn</p>
+                            </div>
+                            <div class="example-output">
+                                <strong>Kết quả:</strong> Giá cân bằng thị trường giảm nhưng lượng giao dịch tăng
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Điểm chính:</strong>
+                            Điểm cân bằng (equilibrium) là nơi mà lượng cầu bằng lượng cung. Tại điểm này, thị trường ổn
+                            định và không có thiếu hụt hay thừa hàng.
+                        </div>
+                    </div>
+
+                    <!-- Elasticity -->
+                    <div class="lesson" id="lesson-elasticity" style="display: none;">
+                        <h2>📏 Elasticity (Độ co giãn)</h2>
+
+                        <div class="concept-box">
+                            <h3>Định nghĩa</h3>
+                            <p><strong>Elasticity</strong> đo lường mức độ phản ứng của lượng cầu hoặc cung khi giá thay
+                                đổi.</p>
+                        </div>
+
+                        <h3>📌 Price Elasticity of Demand (PED)</h3>
+                        <div class="definition">
+                            Được tính bằng: % thay đổi lượng cầu ÷ % thay đổi giá
+                        </div>
+
+                        <div class="formula">
+                            <strong>PED = (ΔQ / Q) / (ΔP / P)</strong>
+                            <br><br>
+                            Hoặc: <strong>PED = (% thay đổi Quantity) / (% thay đổi Price)</strong>
+                        </div>
+
+                        <h3>💡 Phân loại Elasticity</h3>
+                        <div class="step">
+                            <strong>📍 Elastic (|PED| &gt; 1)</strong>
+                            Cầu rất nhạy cảm với giá. Thay đổi giá 1% → Lượng cầu thay đổi &gt; 1%
+                            <p style="margin: 8px 0 0 0; font-size: 13px; color: #666;">Ví dụ: Hàng xa xỉ, đồ chơi</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Unit Elastic (|PED| = 1)</strong>
+                            Thay đổi giá 1% → Lượng cầu thay đổi chính xác 1%
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Inelastic (|PED| &lt; 1)</strong>
+                            Cầu không nhạy cảm với giá. Thay đổi giá 1% → Lượng cầu thay đổi &lt; 1%
+                            <p style="margin: 8px 0 0 0; font-size: 13px; color: #666;">Ví dụ: Lương thực, nước uống,
+                                thuốc</p>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Ứng dụng kinh doanh:</strong>
+                            Nếu sản phẩm có cầu inelastic, công ty có thể tăng giá để tăng doanh thu mà không lo mất quá
+                            nhiều khách.
+                        </div>
+                    </div>
+
+                    <!-- Consumer Utility -->
+                    <div class="lesson" id="lesson-utility" style="display: none;">
+                        <h2>😊 Consumer Utility (Lợi ích tiêu dùng)</h2>
+
+                        <div class="concept-box">
+                            <h3>Định nghĩa cốt lõi</h3>
+                            <p><strong>Utility</strong> là mức độ thỏa mãn hoặc lợi ích mà người tiêu dùng nhận được từ
+                                việc tiêu dùng một sản phẩm.</p>
+                        </div>
+
+                        <h3>📌 Total Utility vs Marginal Utility</h3>
+
+                        <div class="step">
+                            <strong>📍 Total Utility (TU)</strong>
+                            Tổng lợi ích từ việc tiêu dùng một lượng hàng hóa nhất định
+                            <div class="formula" style="margin-top: 8px;">TU = U₁ + U₂ + U₃ + ... + Uₙ</div>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Marginal Utility (MU)</strong>
+                            Lợi ích bổ sung từ việc tiêu dùng một đơn vị sản phẩm thêm
+                            <div class="formula" style="margin-top: 8px;">MU = ΔTU / ΔQ (Thay đổi TU ÷ Thay đổi
+                                Quantity)</div>
+                        </div>
+
+                        <h3>💻 Mô phỏng: Quy luật Lợi ích Cận biên Giảm dần</h3>
+                        <div class="slider-group">
+                            <label>Số chiếc pizza bạn ăn:</label>
+                            <input type="range" id="pizzaSlider" min="0" max="10" value="3" step="1">
+                            <span class="slider-value" id="pizzaValue">3</span>
+                        </div>
+
+                        <div class="visual-demo">
+                            <svg class="svg-container" viewBox="0 0 500 350" preserveAspectRatio="xMidYMid meet">
+                                <!-- Grid -->
+                                <g stroke="#e0e0e0" stroke-width="1">
+                                    <line x1="50" y1="300" x2="450" y2="300" />
+                                    <line x1="50" y1="50" x2="50" y2="300" />
+                                </g>
+
+                                <!-- Axes -->
+                                <text x="460" y="305" font-size="12" fill="#666">Quantity</text>
+                                <text x="15" y="30" font-size="12" fill="#666">Utility</text>
+
+                                <!-- TU Curve -->
+                                <polyline id="tuCurve"
+                                    points="50,250 100,200 150,155 200,130 250,115 300,110 350,108 400,107 450,107"
+                                    stroke="#2c5aa0" stroke-width="3" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+
+                                <!-- Current point marker -->
+                                <circle id="utPoint" cx="150" cy="155" r="5" fill="#ff6b35" stroke="#fff"
+                                    stroke-width="2" />
+
+                                <text x="250" y="25" fill="#2c5aa0" font-weight="bold" font-size="14">Total Utility
+                                    Curve (TU)</text>
+                                <text x="220" y="320" fill="#666" font-size="12">Lưu ý: TU tăng nhưng tốc độ tăng chậm
+                                    lại</text>
+                            </svg>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Pizza và Sự thỏa mãn</strong>
+                            <div class="step">
+                                <strong>Chiếc 1:</strong> MU = 100 (rất ngon, bạn đói lắm) → TU = 100
+                            </div>
+                            <div class="step">
+                                <strong>Chiếc 2:</strong> MU = 80 (vẫn tốt nhưng no hơn) → TU = 180
+                            </div>
+                            <div class="step">
+                                <strong>Chiếc 3:</strong> MU = 40 (bắt đầu quá no) → TU = 220
+                            </div>
+                            <div class="step">
+                                <strong>Chiếc 4:</strong> MU = 5 (rất no, khó ăn) → TU = 225
+                            </div>
+                            <div class="example-output">
+                                <strong>📊 Kết luận:</strong> MU giảm dần (40 → 5) mặc dù TU vẫn tăng. Đây là Quy luật
+                                Lợi ích Cận biên Giảm dần!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Perfect Competition -->
+                    <div class="lesson" id="lesson-perfect-competition" style="display: none;">
+                        <h2>🏆 Perfect Competition (Cạnh tranh hoàn toàn)</h2>
+
+                        <div class="concept-box">
+                            <h3>Đặc điểm của thị trường cạnh tranh hoàn toàn</h3>
+                            <ol>
+                                <li>Rất nhiều người mua và bán</li>
+                                <li>Sản phẩm đồng nhất (homogeneous)</li>
+                                <li>Tự do vào và rời khỏi thị trường</li>
+                                <li>Các tác nhân có thông tin hoàn toàn</li>
+                                <li>Giá được xác định bởi thị trường, không cá nhân nào có thể ảnh hưởng</li>
+                            </ol>
+                        </div>
+
+                        <h3>📌 Lợi ích và Giới hạn</h3>
+                        <div class="step">
+                            <strong>✅ Ưu điểm:</strong>
+                            <p>• Hiệu quả kinh tế cao</p>
+                            <p>• Giá công bằng cho người tiêu dùng</p>
+                            <p>• Không có lợi nhuận vượt mức</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>❌ Thực tế:</strong>
+                            <p>Hiếm khi thị trường thực tế đạt trạng thái cạnh tranh hoàn toàn</p>
+                            <p>Nông sản (lúa, gạo) là ví dụ gần nhất</p>
+                        </div>
+                    </div>
+
+                    <!-- Monopoly -->
+                    <div class="lesson" id="lesson-monopoly" style="display: none;">
+                        <h2>👑 Monopoly (Độc quyền)</h2>
+
+                        <div class="concept-box">
+                            <h3>Định nghĩa</h3>
+                            <p><strong>Monopoly</strong> là một thị trường chỉ có một người bán duy nhất, người đó có
+                                thể kiểm soát giá cả.</p>
+                        </div>
+
+                        <h3>📌 Điều kiện tạo nên Monopoly</h3>
+                        <div class="step">
+                            <strong>📍 Rào cản vào thị trường cao:</strong>
+                            Cần vốn lớn, công nghệ phức tạp hoặc giấy phép độc quyền
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Kiểm soát tài nguyên:</strong>
+                            Sở hữu độc quyền tài nguyên cần thiết (ví dụ: mỏ kim cương)
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Hiệu ứng mạng lưới:</strong>
+                            Sản phẩm càng nhiều người dùng càng có giá trị (ví dụ: Facebook, Windows)
+                        </div>
+
+                        <h3>💡 So sánh: Cạnh tranh hoàn toàn vs Độc quyền</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>Cạnh tranh hoàn toàn:</strong> P = MC (Giá = Chi phí cận biên)</p>
+                            <p style="margin-top: 8px; margin-bottom: 0;"><strong>Độc quyền:</strong> P &gt; MC (Giá cao
+                                hơn chi phí) → Lợi nhuận vượt mức</p>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>⚖️ Điểm cân bằng:</strong>
+                            Tại sao thị trường độc quyền không hiệu quả? Vì người tiêu dùng phải trả giá cao hơn mức
+                            bình thường, làm giảm lợi ích xã hội.
+                        </div>
+                    </div>
+
+                    <!-- Consumer Choice -->
+                    <div class="lesson" id="lesson-consumer-choice" style="display: none;">
+                        <h2>👥 Consumer Choice: Indifference Curves + Budget Line</h2>
+
+                        <div class="concept-box">
+                            <h3>Vấn đề tiêu dùng cơ bản</h3>
+                            <p>Người tiêu dùng có <strong>thu nhập hạn chế</strong> và muốn <strong>tối đa hóa sự thỏa
+                                    mãn</strong> (utility) từ việc mua hàng hóa. Làm thế nào để lựa chọn?</p>
+                        </div>
+
+                        <h3>📌 Indifference Curve (Đường bàng quan)</h3>
+                        <div class="definition">
+                            <strong>Indifference curve</strong> thể hiện tất cả các kết hợp hàng hóa (x, y) mà người
+                            tiêu dùng nhận được cùng mức thỏa mãn (utility).
+                        </div>
+
+                        <div class="concept-box highlight">
+                            <h4>Đặc điểm:</h4>
+                            <p>• Dốc xuống từ trái sang phải (tradeoff)</p>
+                            <p>• Không bao giờ cắt nhau</p>
+                            <p>• Càng xa gốc tọa độ → Utility cao hơn</p>
+                            <p>• Hình dạng: Lồi (convex)</p>
+                        </div>
+
+                        <h3>📌 Budget Line (Đường ngân sách)</h3>
+                        <div class="definition">
+                            <strong>Budget line</strong> hiển thị tất cả các kết hợp hàng hóa (x, y) mà người tiêu dùng
+                            có thể mua được với thu nhập I và giá (Px, Py).
+                        </div>
+
+                        <div class="formula">
+                            <strong>Px·x + Py·y = I</strong>
+                            <br><br>
+                            Hoặc: <strong>y = (I/Py) - (Px/Py)·x</strong>
+                        </div>
+
+                        <h3>📌 Optimal Choice (Lựa chọn tối ưu)</h3>
+                        <div class="concept-box">
+                            <h4>Điểm tối ưu xảy ra khi:</h4>
+                            <p><strong>Indifference curve tiếp xúc với budget line</strong></p>
+                            <p style="margin-top: 8px; font-size: 14px;">Tại điểm này: Độ dốc IC = Độ dốc BL</p>
+                            <p style="margin-top: 8px; font-size: 14px;"><strong>MRS = Px/Py</strong></p>
+                        </div>
+
+                        <h3>📌 MRS (Marginal Rate of Substitution)</h3>
+                        <div class="definition">
+                            <strong>MRS</strong> = lượng hàng y mà người tiêu dùng sẵn sàng từ bỏ để nhận thêm 1 đơn vị
+                            hàng x, trong khi giữ nguyên utility.
+                        </div>
+
+                        <div class="formula">
+                            <strong>MRS = -dy/dx = MUx / MUy</strong>
+                        </div>
+
+                        <h3>💻 Mô phỏng tương tác</h3>
+                        <div class="slider-group">
+                            <label>Thu nhập (I): <span id="cc-I-val">80</span></label>
+                            <input type="range" id="cc-I" min="20" max="150" value="80" step="5">
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Giá hàng x (Px): <span id="cc-Px-val">5</span></label>
+                            <input type="range" id="cc-Px" min="1" max="15" value="5" step="0.5">
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Giá hàng y (Py): <span id="cc-Py-val">4</span></label>
+                            <input type="range" id="cc-Py" min="1" max="15" value="4" step="0.5">
+                        </div>
+
+                        <div class="visual-demo">
+                            <svg class="svg-container" viewBox="0 0 450 350" preserveAspectRatio="xMidYMid meet">
+                                <g stroke="#e0e0e0" stroke-width="1">
+                                    <line x1="40" y1="300" x2="420" y2="300" />
+                                    <line x1="40" y1="50" x2="40" y2="300" />
+                                </g>
+                                <text x="425" y="305" font-size="12" fill="#666">x</text>
+                                <text x="20" y="35" font-size="12" fill="#666">y</text>
+
+                                <!-- Budget line -->
+                                <line id="cc-budget" x1="40" y1="200" x2="350" y2="300" stroke="#0f766e"
+                                    stroke-width="2.5" />
+
+                                <!-- Indifference curve (Cobb-Douglas) -->
+                                <path id="cc-indiff" d="M 80 150 Q 150 120 200 140 Q 250 160 300 200" stroke="#4338ca"
+                                    stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+                                <!-- Optimal point -->
+                                <circle id="cc-opt" cx="180" cy="160" r="4" fill="#dc2626" />
+                                <text id="cc-opt-label" x="190" y="150" font-size="11" fill="#dc2626">Optimal</text>
+
+                                <text x="350" y="35" fill="#0f766e" font-weight="bold" font-size="12">Budget</text>
+                                <text x="250" y="135" fill="#4338ca" font-weight="bold" font-size="12">IC</text>
+                            </svg>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ số: Cobb-Douglas Utility</strong>
+                            <div class="step">
+                                <strong>U(x,y) = x^0.5 · y^0.5</strong>
+                            </div>
+                            <div class="step">
+                                <strong>I = $80, Px = $5, Py = $4</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>Tối ưu:</strong> x* = α·I/Px = 0.5 × 80/5 = 8<br>
+                                <strong>y* = (1-α)·I/Py = 0.5 × 80/4 = 10</strong>
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Điểm chính:</strong>
+                            Người tiêu dùng tối ưu hóa khi chi tiêu theo tỉ lệ cố định: α% cho x, (1-α)% cho y (nếu
+                            Cobb-Douglas).
+                        </div>
+                    </div>
+
+                    <!-- Income & Substitution Effect -->
+                    <div class="lesson" id="lesson-income-substitution" style="display: none;">
+                        <h2>📊 Income & Substitution Effect</h2>
+
+                        <div class="concept-box">
+                            <h3>Câu hỏi:</h3>
+                            <p>Khi giá hàng x <strong>giảm</strong>, lượng cầu hàng x <strong>tăng</strong>. Nhưng tại
+                                sao? Có 2 lý do:</p>
+                        </div>
+
+                        <h3>📌 Substitution Effect (Hiệu ứng thay thế)</h3>
+                        <div class="definition">
+                            Khi giá x giảm → x trở nên rẻ hơn so với y → Người tiêu dùng thay thế y bằng x (dù utility
+                            giữ nguyên).
+                        </div>
+
+                        <div class="insight">
+                            <strong>Tính chất:</strong> Luôn âm (ngược chiều với giá). Khi Px ↓ thì Qx ↑
+                        </div>
+
+                        <h3>📌 Income Effect (Hiệu ứng thu nhập)</h3>
+                        <div class="definition">
+                            Khi giá x giảm → Sức mua tăng (như người tiêu dùng có thêm tiền) → Tiêu dùng cả x và y tăng.
+                        </div>
+
+                        <div class="insight">
+                            <strong>Tính chất:</strong> Tùy vào loại hàng:
+                            <p style="margin: 8px 0 0 0;">• <strong>Normal good:</strong> Âm (↑ thu nhập → ↑ cầu)</p>
+                            <p>• <strong>Inferior good:</strong> Dương (↑ thu nhập → ↓ cầu)</p>
+                        </div>
+
+                        <h3>📌 Công thức tổng</h3>
+                        <div class="formula">
+                            <strong>ΔQx = Substitution Effect + Income Effect</strong>
+                            <br><br>
+                            ΔQx(total) = ΔQx(sub) + ΔQx(inc)
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Giá dưa hấu giảm</strong>
+                            <div class="step">
+                                <strong>Giá dưa hấu giảm từ $5 → $3</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Substitution:</strong> +20 quả (tương đối rẻ hơn cam)
+                            </div>
+                            <div class="step">
+                                <strong>Income (normal good):</strong> +5 quả (sức mua tăng)
+                            </div>
+                            <div class="example-output">
+                                <strong>Tổng cộng:</strong> +25 quả dưa hấu
+                            </div>
+                        </div>
+
+                        <h3>💡 Giffy Good (Ngoại lệ hiếm)</h3>
+                        <div class="concept-box highlight">
+                            <p>Income effect âm lớn hơn substitution effect dương</p>
+                            <p>→ Khi giá ↓, cầu ↓ (vi phạm quy luật cầu)</p>
+                            <p style="margin-top: 8px; font-size: 13px;">Ví dụ: Khoai tây (inferior good thời suy thoái)
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Production & Cost Curves -->
+                    <div class="lesson" id="lesson-production-cost" style="display: none;">
+                        <h2>🏭 Production & Cost Curves (Ngắn hạn và Dài hạn)</h2>
+
+                        <div class="concept-box">
+                            <h3>Hàm sản xuất</h3>
+                            <p><strong>Q = f(L, K)</strong> = Output dựa trên lao động (L) và vốn (K)</p>
+                        </div>
+
+                        <h3>📌 Các khái niệm sản xuất</h3>
+                        <div class="step">
+                            <strong>📍 Total Product (TP)</strong>
+                            <p>Tổng output từ lượng input L</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Marginal Product (MP)</strong>
+                            <div class="formula" style="margin-top: 8px;">MP_L = dQ/dL</div>
+                            <p style="margin: 8px 0 0 0;">Output bổ sung từ 1 đơn vị lao động thêm</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Average Product (AP)</strong>
+                            <div class="formula" style="margin-top: 8px;">AP_L = Q/L</div>
+                            <p style="margin: 8px 0 0 0;">Output trung bình trên mỗi đơn vị lao động</p>
+                        </div>
+
+                        <h3>📌 Quy luật Sản phẩm cận biên Giảm dần (Law of Diminishing MP)</h3>
+                        <div class="concept-box highlight">
+                            <p>Khi tăng lao động L (vốn K cố định)</p>
+                            <p>→ MP_L tăng lúc đầu, rồi giảm</p>
+                            <p style="margin-top: 8px;"><strong>Tại sao?</strong> Vốn cố định → Lao động thêm ít có việc
+                                làm → Năng suất giảm</p>
+                        </div>
+
+                        <h3>📌 Chi phí sản xuất</h3>
+                        <div class="step">
+                            <strong>📍 Fixed Cost (FC)</strong>
+                            <p>Chi phí cố định (lương quản lý, tiền thuê)</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Variable Cost (VC)</strong>
+                            <p>Chi phí biến (nguyên liệu, lương công nhân)</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Total Cost (TC)</strong>
+                            <div class="formula" style="margin-top: 8px;">TC = FC + VC</div>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Marginal Cost (MC)</strong>
+                            <div class="formula" style="margin-top: 8px;">MC = dTC/dQ</div>
+                            <p style="margin: 8px 0 0 0;">Chi phí tạo ra 1 đơn vị sản phẩm thêm</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Average Cost (AC)</strong>
+                            <div class="formula" style="margin-top: 8px;">AC = TC/Q = AFC + AVC</div>
+                        </div>
+
+                        <h3>💻 Mô phỏng: Chi phí cận biên</h3>
+                        <div class="slider-group">
+                            <label>Sản lượng Q: <span id="pc-Q-val">5</span></label>
+                            <input type="range" id="pc-Q" min="1" max="20" value="5" step="1">
+                        </div>
+
+                        <div class="visual-demo">
+                            <svg class="svg-container" viewBox="0 0 450 300" preserveAspectRatio="xMidYMid meet">
+                                <g stroke="#e0e0e0" stroke-width="1">
+                                    <line x1="40" y1="250" x2="420" y2="250" />
+                                    <line x1="40" y1="20" x2="40" y2="250" />
+                                </g>
+                                <text x="425" y="255" font-size="12" fill="#666">Q</text>
+                                <text x="15" y="30" font-size="12" fill="#666">Cost</text>
+
+                                <!-- TC Curve -->
+                                <path id="pc-TC" d="M 40 220 Q 150 150 200 120 Q 250 100 350 80" stroke="#0f766e"
+                                    stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+                                <!-- MC Curve -->
+                                <path id="pc-MC" d="M 40 200 L 350 100" stroke="#ff6b35" stroke-width="2.5" fill="none"
+                                    stroke-linecap="round" />
+
+                                <!-- AC Curve -->
+                                <path id="pc-AC" d="M 40 200 Q 150 160 250 120" stroke="#4338ca" stroke-width="2.5"
+                                    fill="none" stroke-linecap="round" />
+
+                                <text x="320" y="75" fill="#0f766e" font-weight="bold" font-size="11">TC</text>
+                                <text x="340" y="95" fill="#ff6b35" font-weight="bold" font-size="11">MC</text>
+                                <text x="250" y="105" fill="#4338ca" font-weight="bold" font-size="11">AC</text>
+                            </svg>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Mối quan hệ MC – AC:</strong>
+                            • Khi MC < AC → AC giảm (kéo trung bình xuống)<br>
+                                • Khi MC > AC → AC tăng (kéo trung bình lên)<br>
+                                • Khi MC = AC → AC ở mức thấp nhất
+                        </div>
+                    </div>
+
+                    <!-- Cournot Oligopoly -->
+                    <div class="lesson" id="lesson-cournot-oligopoly" style="display: none;">
+                        <h2>🎲 Cournot Oligopoly (Độc quyền nhóm)</h2>
+
+                        <div class="definition">
+                            <strong>Oligopoly</strong> là thị trường có vài người bán (ví dụ: 2–5 công ty). Mỗi công ty
+                            phải tính toán hành động của đối thủ.
+                        </div>
+
+                        <h3>📌 Mô hình Cournot</h3>
+                        <div class="concept-box">
+                            <p><strong>Giả định:</strong> Mỗi công ty chọn sản lượng (quantity), giá được xác định bởi
+                                thị trường.</p>
+                            <p style="margin-top: 8px;"><strong>Mục tiêu:</strong> Tối đa hóa lợi nhuận, biết đối thủ
+                                cũng làm vậy.</p>
+                        </div>
+
+                        <h3>📌 Ví dụ: Duopoly (2 công ty)</h3>
+                        <div class="formula">
+                            <strong>Hàm cầu:</strong> P = 100 - Q₁ - Q₂
+                            <br><br>
+                            <strong>Chi phí:</strong> C₁ = 10Q₁, C₂ = 10Q₂
+                        </div>
+
+                        <div class="step">
+                            <strong>Công ty 1 tối đa hóa:</strong>
+                            <p style="margin: 8px 0 0 0;">π₁ = (100 - Q₁ - Q₂)Q₁ - 10Q₁</p>
+                            <p style="margin: 8px 0 0 0;">dπ₁/dQ₁ = 100 - 2Q₁ - Q₂ - 10 = 0</p>
+                            <p style="margin: 8px 0 0 0;"><strong>Q₁ = (90 - Q₂)/2</strong> (Hàm phản ứng tối ưu)</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>Tương tự, công ty 2:</strong>
+                            <p style="margin: 8px 0 0 0;"><strong>Q₂ = (90 - Q₁)/2</strong></p>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Cân bằng Nash</strong>
+                            <div class="step">
+                                Giải hệ: Q₁ = (90 - Q₂)/2 và Q₂ = (90 - Q₁)/2
+                            </div>
+                            <div class="example-output">
+                                <strong>Q₁* = Q₂* = 30</strong><br>
+                                <strong>P* = 100 - 30 - 30 = 40</strong><br>
+                                <strong>π₁* = π₂* = (40 - 10) × 30 = 900</strong>
+                            </div>
+                        </div>
+
+                        <h3>💡 So sánh cấu trúc thị trường</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>Perfect Competition:</strong> P = 10, Q = 90 (chia 90 công ty)</p>
+                            <p style="margin: 8px 0 0 0;"><strong>Duopoly (Cournot):</strong> P = 40, Q = 60</p>
+                            <p style="margin: 8px 0 0 0;"><strong>Monopoly:</strong> P = 55, Q = 45 (lợi nhuận cao nhất)
+                            </p>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Điểm chính:</strong>
+                            Cournot oligopoly → Giá cao hơn cạnh tranh hoàn toàn nhưng thấp hơn độc quyền. Công ty không
+                            hợp tác.
+                        </div>
+                    </div>
+
+                    <!-- Externalities -->
+                    <div class="lesson" id="lesson-externalities" style="display: none;">
+                        <h2>🌍 Externalities & Pigouvian Tax</h2>
+
+                        <div class="definition">
+                            <strong>Externality</strong> là tác động của quyết định của một người lên phúc lợi của người
+                            khác, nhưng không được phản ánh trong giá cả.
+                        </div>
+
+                        <h3>📌 Loại Externality</h3>
+                        <div class="step">
+                            <strong>📍 Negative Externality (Tác động tiêu cực)</strong>
+                            <p>Ví dụ: Ô nhiễm từ nhà máy → Người dân xung quanh bị hại (chi phí xã hội > chi phí cá
+                                nhân)</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Positive Externality (Tác động tích cực)</strong>
+                            <p>Ví dụ: Giáo dục → Xã hội được lợi (lợi ích xã hội > lợi ích cá nhân)</p>
+                        </div>
+
+                        <h3>📌 Inefficiency (Không hiệu quả)</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>Negative externality:</strong></p>
+                            <p style="margin: 8px 0 0 0;">Giá bán phản ánh MC cá nhân, không MEC (xã hội) → Sản lượng
+                                quá cao → Thừa hàng (từ góc độ xã hội)</p>
+                            <p style="margin: 16px 0 8px 0;"><strong>Positive externality:</strong></p>
+                            <p>Giá chỉ phản ánh MB cá nhân → Sản lượng quá thấp → Thiếu hàng (từ góc độ xã hội)</p>
+                        </div>
+
+                        <h3>📌 Pigouvian Tax/Subsidy</h3>
+                        <div class="definition">
+                            <strong>Pigouvian Tax:</strong> Thuế được áp đặt trên loại hàng có negative externality để
+                            "nội hóa" chi phí xã hội.
+                        </div>
+
+                        <div class="formula">
+                            <strong>Thuế Pigouvian = Tổng chi phí xã hội bên ngoài (MEC)</strong>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Ô nhiễm từ nhà máy</strong>
+                            <div class="step">
+                                <strong>MC cá nhân nhà máy:</strong> $50/đơn vị
+                            </div>
+                            <div class="step">
+                                <strong>Chi phí xã hội (ô nhiễm):</strong> $30/đơn vị
+                            </div>
+                            <div class="step">
+                                <strong>MC xã hội = $50 + $30 = $80</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>Pigouvian tax = $30/đơn vị</strong><br>
+                                → Nhà máy tính toán lại → Sản lượng giảm → Hiệu quả xã hội
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>📌 Subsidies cho Positive Externality:</strong>
+                            Chính phủ trợ cấp giáo dục → Giá cả hạ → Nhiều người học → Xã hội lợi ích
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Macroeconomics Section -->
+        <section id="macroeconomics" class="section">
+            <div class="lesson-container">
+                <div class="lesson-sidebar">
+                    <h4>📖 Các bài học</h4>
+                    <ul class="lesson-list">
+                        <li class="lesson-item active" data-lesson="gdp">
+                            <strong>GDP</strong>
+                            <small>Cơ bản</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="inflation">
+                            <strong>Inflation</strong>
+                            <small>Trung bình</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="unemployment">
+                            <strong>Unemployment</strong>
+                            <small>Trung bình</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="circular-flow">
+                            <strong>Circular Flow</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="is-lm-model">
+                            <strong>IS–LM Model</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="ad-as-model">
+                            <strong>AD–AS Model</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="phillips-curve">
+                            <strong>Phillips Curve & Expectations</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="solow-growth">
+                            <strong>Solow Growth Model</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lesson-content">
+                    <!-- GDP -->
+                    <div class="lesson" id="lesson-gdp" style="display: block;">
+                        <h2>💼 Gross Domestic Product (GDP)</h2>
+
+                        <div class="definition">
+                            <strong>GDP</strong> là tổng giá trị của tất cả hàng hóa và dịch vụ được sản xuất trong một
+                            nước trong một khoảng thời gian nhất định (thường là 1 năm).
+                        </div>
+
+                        <h3>📌 Công thức tính GDP</h3>
+                        <div class="formula">
+                            <strong>GDP = C + I + G + (X - M)</strong>
+                            <br><br>
+                            • <strong>C</strong> = Consumer Spending (Tiêu dùng cá nhân)<br>
+                            • <strong>I</strong> = Investment (Đầu tư)<br>
+                            • <strong>G</strong> = Government Spending (Chi tiêu chính phủ)<br>
+                            • <strong>X</strong> = Exports (Xuất khẩu)<br>
+                            • <strong>M</strong> = Imports (Nhập khẩu)
+                        </div>
+
+                        <h3>💻 Tương tác: Thành phần GDP</h3>
+                        <div class="slider-group">
+                            <label>Tiêu dùng cá nhân (C) - % GDP:</label>
+                            <input type="range" id="consumptionSlider" min="0" max="100" value="65" step="1">
+                            <span class="slider-value" id="consumptionValue">65%</span>
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Đầu tư (I) - % GDP:</label>
+                            <input type="range" id="investmentSlider" min="0" max="100" value="20" step="1">
+                            <span class="slider-value" id="investmentValue">20%</span>
+                        </div>
+
+                        <div class="visual-demo">
+                            <canvas id="gdpChart" width="400" height="300"
+                                style="max-width: 100%; height: auto;"></canvas>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Tính GDP của Việt Nam (đơn vị tỷ USD)</strong>
+                            <div class="example-input">
+                                <p>C (Tiêu dùng) = 257 tỷ USD</p>
+                                <p>I (Đầu tư) = 140 tỷ USD</p>
+                                <p>G (Chi chính phủ) = 45 tỷ USD</p>
+                                <p>X (Xuất khẩu) = 406 tỷ USD</p>
+                                <p>M (Nhập khẩu) = 381 tỷ USD</p>
+                            </div>
+                            <div class="example-output">
+                                <strong>GDP = 257 + 140 + 45 + (406 - 381) = 467 tỷ USD</strong>
+                            </div>
+                        </div>
+
+                        <h3>📌 Nominal GDP vs Real GDP</h3>
+                        <div class="step">
+                            <strong>💵 Nominal GDP</strong>
+                            Được tính bằng giá hiện tại (có tính lạm phát)
+                        </div>
+
+                        <div class="step">
+                            <strong>📊 Real GDP</strong>
+                            Được tính bằng giá cố định năm gốc (loại bỏ ảnh hưởng lạm phát)
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Tại sao Real GDP quan trọng?</strong>
+                            Nó cho thấy tăng trưởng thực sự của nền kinh tế, không bị méo mó bởi lạm phát.
+                        </div>
+                    </div>
+
+                    <!-- Inflation -->
+                    <div class="lesson" id="lesson-inflation" style="display: none;">
+                        <h2>📈 Inflation (Lạm phát)</h2>
+
+                        <div class="definition">
+                            <strong>Lạm phát</strong> là sự tăng mức giá chung của hàng hóa và dịch vụ trong nền kinh tế
+                            theo thời gian.
+                        </div>
+
+                        <h3>📌 Nguyên nhân gây Lạm phát</h3>
+                        <div class="concept-box highlight">
+                            <h4>🔥 Demand-Pull Inflation</h4>
+                            <p>"Quá nhiều tiền đuổi theo quá ít hàng"</p>
+                            <p>Khi cầu > cung → Giá tăng</p>
+                        </div>
+
+                        <div class="concept-box">
+                            <h4>💸 Cost-Push Inflation</h4>
+                            <p>Khi chi phí sản xuất tăng (lương, nguyên liệu) → Giá sản phẩm tăng</p>
+                        </div>
+
+                        <h3>📌 Tính Inflation Rate</h3>
+                        <div class="formula">
+                            <strong>Inflation Rate = [(CPI₂ - CPI₁) / CPI₁] × 100%</strong>
+                            <br><br>
+                            <strong>CPI</strong> = Consumer Price Index (Chỉ số giá tiêu dùng)
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Lạm phát năm 2023-2024</strong>
+                            <div class="step">
+                                <strong>CPI năm 2023:</strong> 100 (mốc cơ sở)
+                            </div>
+                            <div class="step">
+                                <strong>CPI năm 2024:</strong> 105
+                            </div>
+                            <div class="example-output">
+                                <strong>Inflation Rate = [(105 - 100) / 100] × 100% = 5%</strong>
+                            </div>
+                        </div>
+
+                        <h3>💡 Ảnh hưởng của Lạm phát</h3>
+                        <div class="step">
+                            <strong>❌ Tác động tiêu cực:</strong>
+                            <p>• Người tiêu dùng mua được ít hàng hơn (sức mua giảm)</p>
+                            <p>• Người có tiền tiết kiệm bị mất lợi</p>
+                            <p>• Không chắc chắn trong kinh doanh</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>✅ Tác động tích cực (ôn hòa):</strong>
+                            <p>• Khuyến khích chi tiêu và đầu tư</p>
+                            <p>• Giảm gánh nợ thực</p>
+                            <p>• Kích thích tăng trưởng kinh tế</p>
+                        </div>
+                    </div>
+
+                    <!-- Unemployment -->
+                    <div class="lesson" id="lesson-unemployment" style="display: none;">
+                        <h2>👥 Unemployment (Thất nghiệp)</h2>
+
+                        <div class="definition">
+                            <strong>Thất nghiệp</strong> là trạng thái mà người lao động có khả năng làm việc nhưng
+                            không tìm được việc làm.
+                        </div>
+
+                        <h3>📌 Tính Unemployment Rate</h3>
+                        <div class="formula">
+                            <strong>Unemployment Rate = (Số người thất nghiệp / Lực lượng lao động) × 100%</strong>
+                            <br><br>
+                            <strong>Lực lượng lao động</strong> = Đang làm việc + Thất nghiệp (đang tìm việc)
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ tính toán</strong>
+                            <div class="step">
+                                <strong>Dân số: 100 triệu người</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Lực lượng lao động: 50 triệu người</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Người có việc làm: 49 triệu</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Người thất nghiệp: 1 triệu</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>Unemployment Rate = (1 / 50) × 100% = 2%</strong>
+                            </div>
+                        </div>
+
+                        <h3>📌 Các loại Thất nghiệp</h3>
+                        <div class="step">
+                            <strong>🔄 Frictional Unemployment</strong>
+                            Thất nghiệp do chuyển việc (từ một công việc sang công việc khác)
+                        </div>
+
+                        <div class="step">
+                            <strong>🏭 Structural Unemployment</strong>
+                            Thất nghiệp do thay đổi cơ cấu kinh tế (máy thay người lao động, ngành suy thoái)
+                        </div>
+
+                        <div class="step">
+                            <strong>📉 Cyclical Unemployment</strong>
+                            Thất nghiệp do chu kỳ kinh tế (suy thoái, khủng hoảng)
+                        </div>
+
+                        <div class="insight">
+                            <strong>💡 Lưu ý:</strong> Một tỷ lệ thất nghiệp tự nhiên nhất định (thường 4-5%) được coi
+                            là lành mạnh vì nó cho phép người lao động chuyển việc.
+                        </div>
+                    </div>
+
+                    <!-- Circular Flow -->
+                    <div class="lesson" id="lesson-circular-flow" style="display: none;">
+                        <h2>🔄 Circular Flow Model (Mô hình dòng chảy vòng tròn)</h2>
+
+                        <div class="concept-box">
+                            <h3>Định nghĩa</h3>
+                            <p><strong>Circular Flow</strong> là mô hình minh họa cách tiền tệ, hàng hóa và dịch vụ lưu
+                                thông giữa các hộ gia đình, doanh nghiệp và chính phủ.</p>
+                        </div>
+
+                        <h3>📌 Các thành phần chính</h3>
+                        <div class="step">
+                            <strong>🏠 Households (Hộ gia đình)</strong>
+                            <p>• Cung cấp lao động</p>
+                            <p>• Tiêu dùng hàng hóa và dịch vụ</p>
+                            <p>• Nhận lương, lợi nhuận, lãi suất</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>🏢 Firms (Doanh nghiệp)</strong>
+                            <p>• Sản xuất hàng hóa và dịch vụ</p>
+                            <p>• Tuyển dụng lao động</p>
+                            <p>• Trả lương cho công nhân</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>🏛️ Government (Chính phủ)</strong>
+                            <p>• Thu thuế</p>
+                            <p>• Chi tiêu cho hạ tầng và dịch vụ công</p>
+                            <p>• Điều tiết nền kinh tế</p>
+                        </div>
+
+                        <h3>💻 Mô hình minh họa</h3>
+                        <div class="visual-demo">
+                            <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet">
+                                <!-- Background -->
+                                <rect x="10" y="10" width="480" height="380" fill="#f0f8ff" stroke="#2c5aa0"
+                                    stroke-width="2" rx="10" />
+
+                                <!-- Households Circle -->
+                                <circle cx="80" cy="200" r="50" fill="#e3f2fd" stroke="#2c5aa0" stroke-width="2" />
+                                <text x="80" y="205" text-anchor="middle" font-weight="bold">Households</text>
+
+                                <!-- Firms Circle -->
+                                <circle cx="420" cy="200" r="50" fill="#fff3e0" stroke="#ff6b35" stroke-width="2" />
+                                <text x="420" y="205" text-anchor="middle" font-weight="bold">Firms</text>
+
+                                <!-- Money Flow (Households to Firms) - Top -->
+                                <path d="M 130 150 Q 250 100 370 150" stroke="#e74c3c" stroke-width="3" fill="none"
+                                    marker-end="url(#arrowRed)" />
+                                <text x="250" y="130" text-anchor="middle" fill="#e74c3c" font-size="12">💰 Consumer
+                                    Spending</text>
+
+                                <!-- Goods Flow (Firms to Households) - Bottom -->
+                                <path d="M 370 250 Q 250 300 130 250" stroke="#04a777" stroke-width="3" fill="none"
+                                    marker-end="url(#arrowGreen)" />
+                                <text x="250" y="330" text-anchor="middle" fill="#04a777" font-size="12">📦 Goods &amp;
+                                    Services</text>
+
+                                <!-- Money Flow (Firms to Households - Wages) -->
+                                <path d="M 370 170 Q 250 170 130 170" stroke="#2c5aa0" stroke-width="3" fill="none"
+                                    marker-end="url(#arrowBlue)" />
+                                <text x="250" y="155" text-anchor="middle" fill="#2c5aa0" font-size="12">💵 Wages &amp;
+                                    Income</text>
+
+                                <!-- Labor Flow (Households to Firms) -->
+                                <path d="M 130 230 Q 250 230 370 230" stroke="#9c27b0" stroke-width="3" fill="none"
+                                    marker-end="url(#arrowPurple)" />
+                                <text x="250" y="255" text-anchor="middle" fill="#9c27b0" font-size="12">👷 Labor</text>
+
+                                <!-- Arrow markers -->
+                                <defs>
+                                    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3"
+                                        orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c" />
+                                    </marker>
+                                    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3"
+                                        orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#04a777" />
+                                    </marker>
+                                    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3"
+                                        orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#2c5aa0" />
+                                    </marker>
+                                    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3"
+                                        orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#9c27b0" />
+                                    </marker>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Hiểu được Circular Flow giúp bạn:</strong>
+                            • Thấy cách tiền lưu thông trong nền kinh tế<br>
+                            • Hiểu tại sao chi tiêu của người này là thu nhập của người khác<br>
+                            • Hiểu cách các chính sách ảnh hưởng đến toàn bộ hệ thống
+                        </div>
+                    </div>
+
+                    <!-- IS–LM Model -->
+                    <div class="lesson" id="lesson-is-lm-model" style="display: none;">
+                        <h2>📊 IS–LM Model (Cân bằng tổng thể)</h2>
+
+                        <div class="concept-box">
+                            <h3>Mô hình IS–LM</h3>
+                            <p>Minh họa cách <strong>thị trường hàng hóa (IS)</strong> và <strong>thị trường tiền tệ
+                                    (LM)</strong> tương tác để xác định <strong>thu nhập (Y) và lãi suất (i)</strong>
+                                cân bằng.</p>
+                        </div>
+
+                        <h3>📌 IS Curve (Investment-Saving)</h3>
+                        <div class="definition">
+                            <strong>IS:</strong> Tất cả các kết hợp (Y, i) mà thị trường hàng hóa cân bằng (S = I)
+                        </div>
+
+                        <div class="formula">
+                            <strong>Y = C(Y) + I(i) + G</strong><br><br>
+                            Khi i ↑ → I ↓ → Y ↓ (đường IS dốc xuống)
+                        </div>
+
+                        <h3>📌 LM Curve (Liquidity-Money)</h3>
+                        <div class="definition">
+                            <strong>LM:</strong> Tất cả các kết hợp (Y, i) mà thị trường tiền tệ cân bằng (M/P = L(i,
+                            Y))
+                        </div>
+
+                        <div class="formula">
+                            <strong>M/P = kY - hi</strong> (hàm cầu tiền)<br><br>
+                            Khi Y ↑ → M cầu ↑ → i ↑ (đường LM dốc lên)
+                        </div>
+
+                        <h3>📌 Cân bằng</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>Giao điểm IS–LM:</strong> Y* và i* thỏa mãn cả 2 thị trường</p>
+                            <p style="margin-top: 8px;">• Hàng hóa: S = I</p>
+                            <p>• Tiền tệ: M/P = L</p>
+                        </div>
+
+                        <h3>📌 Dịch chuyển và chính sách</h3>
+                        <div class="step">
+                            <strong>📍 Chính sách tài khóa (G ↑):</strong>
+                            <p style="margin: 8px 0 0 0;">IS dịch sang phải → Y ↑ nhưng i ↑ (crowding-out)</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Chính sách tiền tệ (M ↑):</strong>
+                            <p style="margin: 8px 0 0 0;">LM dịch sang phải → Y ↑ và i ↓</p>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ Cơ sở</strong>
+                            <div class="step">
+                                <strong>Ban đầu:</strong> Y = 100, i = 5%
+                            </div>
+                            <div class="step">
+                                <strong>Chính phủ tăng G (IS →):</strong> IS dịch phải
+                            </div>
+                            <div class="example-output">
+                                <strong>Tác động:</strong> Y ↑ → 105, i ↑ → 6%<br>
+                                Tăng GDP nhưng lãi suất cao → Đầu tư tư nhân bị ép
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Chính sách hiệu quả nhất phụ thuộc vào hình dạng IS–LM:</strong><br>
+                            • Nếu IS dốc → Tiền tệ hiệu quả hơn<br>
+                            • Nếu LM dốc → Tài khóa hiệu quả hơn
+                        </div>
+                    </div>
+
+                    <!-- AD–AS Model -->
+                    <div class="lesson" id="lesson-ad-as-model" style="display: none;">
+                        <h2>📈 AD–AS Model (Output & Inflation)</h2>
+
+                        <div class="definition">
+                            <strong>AD–AS model</strong> giải thích mối quan hệ giữa <strong>mức giá (P)</strong> và
+                            <strong>sản lượng (Q)</strong> trong nền kinh tế.
+                        </div>
+
+                        <h3>📌 AD Curve (Aggregate Demand)</h3>
+                        <div class="concept-box">
+                            <p><strong>AD:</strong> Lượng hàng hóa/dịch vụ mà tất cả người mua sẵn sàng mua tại các mức
+                                giá khác nhau</p>
+                            <p style="margin-top: 8px;"><strong>Dốc xuống:</strong> P ↑ → Mua sức mua ↓ → Q cầu ↓</p>
+                        </div>
+
+                        <h3>📌 AS Curve (Aggregate Supply)</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>AS (ngắn hạn - SRAS):</strong> Dốc lên. P ↑ → Lợi nhuận ↑ → Công ty sản xuất
+                                nhiều hơn</p>
+                            <p style="margin-top: 8px;"><strong>AS (dài hạn - LRAS):</strong> Dốc đứng tại Y_potential
+                                (mức sản xuất tự nhiên)</p>
+                        </div>
+
+                        <h3>📌 Cân bằng & Shock</h3>
+                        <div class="step">
+                            <strong>📍 Demand Shock (dịch AD)</strong>
+                            <p style="margin: 8px 0 0 0;">Ví dụ: Chính phủ tăng G → AD dịch phải → P ↑, Q ↑ (tạm thời)
+                            </p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Supply Shock (dịch AS)</strong>
+                            <p style="margin: 8px 0 0 0;">Ví dụ: Giá dầu ↑ → AS dịch trái → P ↑, Q ↓ (stagflation)</p>
+                        </div>
+
+                        <h3>💻 Mô phỏng tương tác</h3>
+                        <div class="slider-group">
+                            <label>Dịch chuyển AD: <span id="ad-shift-val">0</span></label>
+                            <input type="range" id="ad-shift" min="-30" max="30" value="0" step="5">
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Dịch chuyển AS: <span id="as-shift-val">0</span></label>
+                            <input type="range" id="as-shift" min="-30" max="30" value="0" step="5">
+                        </div>
+
+                        <div class="visual-demo">
+                            <svg class="svg-container" viewBox="0 0 450 320" preserveAspectRatio="xMidYMid meet">
+                                <g stroke="#e0e0e0" stroke-width="1">
+                                    <line x1="40" y1="250" x2="420" y2="250" />
+                                    <line x1="40" y1="30" x2="40" y2="250" />
+                                </g>
+                                <text x="425" y="255" font-size="12" fill="#666">Q</text>
+                                <text x="15" y="25" font-size="12" fill="#666">P</text>
+
+                                <!-- AD Curve -->
+                                <polyline id="ad-curve" points="40,80 150,130 250,170 350,200 420,230" stroke="#2c5aa0"
+                                    stroke-width="2.5" fill="none" />
+
+                                <!-- SRAS Curve -->
+                                <polyline id="as-curve" points="40,230 150,190 250,150 350,100 420,40" stroke="#ff6b35"
+                                    stroke-width="2.5" fill="none" />
+
+                                <!-- Equilibrium -->
+                                <circle id="ad-as-eq" cx="230" cy="165" r="4" fill="#04a777" />
+
+                                <!-- LRAS (dựng đứng) -->
+                                <line id="lras-line" x1="250" y1="30" x2="250" y2="250" stroke="#04a777"
+                                    stroke-width="1.5" stroke-dasharray="5,5" />
+
+                                <text x="350" y="220" fill="#2c5aa0" font-weight="bold" font-size="11">AD</text>
+                                <text x="140" y="185" fill="#ff6b35" font-weight="bold" font-size="11">SRAS</text>
+                                <text x="260" y="45" fill="#04a777" font-weight="bold" font-size="11">LRAS</text>
+                            </svg>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Khủng hoảng tài chính</strong>
+                            <div class="step">
+                                <strong>Sự kiện:</strong> Ngân hàng phá sản → Người dân không tin tưởng → Chi tiêu giảm
+                            </div>
+                            <div class="step">
+                                <strong>Tác động:</strong> AD dịch trái
+                            </div>
+                            <div class="example-output">
+                                <strong>Kết quả:</strong> P ↓ (lạm phát âm), Q ↓ (suy thoái)
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Dài hạn vs Ngắn hạn:</strong><br>
+                            • <strong>Ngắn hạn:</strong> Giá dính (sticky) → AD xảy ra nhiều tác động<br>
+                            • <strong>Dài hạn:</strong> Giá linh hoạt → Hệ thống tự điều chỉnh về LRAS
+                        </div>
+                    </div>
+
+                    <!-- Phillips Curve -->
+                    <div class="lesson" id="lesson-phillips-curve" style="display: none;">
+                        <h2>📉 Phillips Curve & Expectations</h2>
+
+                        <div class="definition">
+                            <strong>Phillips Curve:</strong> Mối quan hệ giữa <strong>tỷ lệ thất nghiệp (U)</strong> và
+                            <strong>tỷ lệ lạm phát (π)</strong>
+                        </div>
+
+                        <h3>📌 Phiên bản ban đầu (Phillips 1958)</h3>
+                        <div class="formula">
+                            <strong>π = a - b·U</strong><br><br>
+                            Lạm phát cao khi thất nghiệp thấp (tradeoff)
+                        </div>
+
+                        <h3>📌 Phiên bản hiện đại (với kỳ vọng)</h3>
+                        <div class="formula">
+                            <strong>π = π^e - b·(U - U_n)</strong><br><br>
+                            π^e = lạm phát kỳ vọng<br>
+                            U_n = tỷ lệ thất nghiệp tự nhiên
+                        </div>
+
+                        <h3>📌 Ý nghĩa</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>Nếu π^e ↑:</strong> Toàn bộ đường Phillips dịch lên</p>
+                            <p style="margin: 8px 0 0 0;">→ Cải thiện cạnh tranh (tradeoff) π–U sẽ xấu đi</p>
+                            <p style="margin: 16px 0 8px 0;"><strong>Tại U = U_n:</strong> π = π^e (dài hạn)</p>
+                            <p>→ Chính sách tiền tệ không thể giảm thất nghiệp lâu dài</p>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: 1970s Stagflation</strong>
+                            <div class="step">
+                                <strong>Giá dầu ↑ → Cung sốc âm</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Mọi người kỳ vọng lạm phát cao (π^e ↑)</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>Kết quả:</strong> π cao, U cao (stagflation)<br>
+                                Tradeoff π–U không còn giữ
+                            </div>
+                        </div>
+
+                        <div class="insight">
+                            <strong>💡 Kỳ vọng cực kỳ quan trọng:</strong> Nếu mọi người tin lạm phát sẽ cao → Họ đòi
+                            lương cao → Công ty tăng giá → Lạm phát thực sự cao (tự thực hiện tiên đoán)
+                        </div>
+                    </div>
+
+                    <!-- Solow Growth Model -->
+                    <div class="lesson" id="lesson-solow-growth" style="display: none;">
+                        <h2>🌱 Solow Growth Model (Tăng trưởng dài hạn)</h2>
+
+                        <div class="definition">
+                            <strong>Solow model</strong> giải thích tăng trưởng kinh tế dài hạn dựa trên <strong>vốn
+                                (K), lao động (L), và công nghệ (A)</strong>
+                        </div>
+
+                        <h3>📌 Hàm sản xuất Cobb-Douglas</h3>
+                        <div class="formula">
+                            <strong>Y = A·K^α·L^(1-α)</strong><br><br>
+                            α = elasticity vốn (thường 0.3)<br>
+                            A = Công nghệ (Total Factor Productivity - TFP)
+                        </div>
+
+                        <h3>📌 Động học tích lũy vốn</h3>
+                        <div class="concept-box">
+                            <p><strong>Vốn bình quân (k = K/L) thay đổi theo:</strong></p>
+                            <p style="margin-top: 8px;"><strong>dk/dt = s·f(k) - (n + δ)·k</strong></p>
+                            <p style="margin-top: 8px; font-size: 13px;">s = tỷ lệ tiết kiệm, n = tăng trưởng dân số, δ
+                                = khấu hao</p>
+                        </div>
+
+                        <h3>📌 Steady State (k*)</h3>
+                        <div class="definition">
+                            <strong>Steady state:</strong> Trạng thái k không đổi (tăng trưởng không tăng)
+                        </div>
+
+                        <div class="formula">
+                            <strong>Tại steady state: s·f(k*) = (n + δ)·k*</strong>
+                        </div>
+
+                        <h3>💡 Ý nghĩa</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>Tiết kiệm nhiều hơn (s ↑):</strong> k* tăng → Y/L tăng (thu nhập bình quân ↑)</p>
+                            <p style="margin: 8px 0 0 0;"><strong>Dân số tăng (n ↑):</strong> k* giảm (chia sẻ k cho
+                                nhiều người)</p>
+                            <p style="margin: 8px 0 0 0;"><strong>Công nghệ (A ↑):</strong> Dịch đường f(k) lên → k**
+                                cao hơn</p>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Tại sao một số nước giàu, một số nước nghèo</strong>
+                            <div class="step">
+                                <strong>Nước A: s = 20%, n = 1%, δ = 5%</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Nước B: s = 10%, n = 3%, δ = 5%</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>Nước A có k* cao hơn → Giàu hơn</strong><br>
+                                Do tiết kiệm cao + dân số tăng chậm
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Điểm chính:</strong><br>
+                            • Dưới steady state: Phát triển nhanh (catch-up effect)<br>
+                            • Trên steady state: Phát triển chậm<br>
+                            • Tăng trưởng dài hạn chỉ từ A (công nghệ)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finance Section -->
+        <section id="finance" class="section">
+            <div class="lesson-container">
+                <div class="lesson-sidebar">
+                    <h4>📖 Các bài học</h4>
+                    <ul class="lesson-list">
+                        <li class="lesson-item active" data-lesson="time-value">
+                            <strong>Time Value of Money</strong>
+                            <small>Cơ bản</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="present-value">
+                            <strong>Present Value</strong>
+                            <small>Trung bình</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="risk-return">
+                            <strong>Risk &amp; Return</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="bonds-stocks">
+                            <strong>Bonds vs Stocks</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="bond-pricing">
+                            <strong>Bond Pricing & Yield Curve</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="duration-convexity">
+                            <strong>Duration & Convexity</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="portfolio-2asset">
+                            <strong>Mean–Variance Portfolio (2 assets)</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="capm">
+                            <strong>CAPM & Beta</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="options-payoff">
+                            <strong>Options Payoff Diagram</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lesson-content">
+                    <!-- Time Value of Money -->
+                    <div class="lesson" id="lesson-time-value" style="display: block;">
+                        <h2>⏰ Time Value of Money</h2>
+
+                        <div class="definition">
+                            <strong>Time Value of Money</strong> là nguyên lý rằng tiền có giá trị lớn hơn ngày hôm nay
+                            so với ngày mai.
+                        </div>
+
+                        <h3>📌 Tại sao?</h3>
+                        <div class="concept-box highlight">
+                            <p>💰 <strong>Lãi suất:</strong> Tiền hôm nay có thể được đầu tư để tạo ra lãi</p>
+                            <p style="margin: 8px 0 0 0;">📉 <strong>Lạm phát:</strong> Sức mua của tiền giảm theo thời
+                                gian</p>
+                            <p style="margin: 8px 0 0 0;">⚠️ <strong>Rủi ro:</strong> Tương lai không chắc chắn</p>
+                        </div>
+
+                        <h3>📌 Future Value (FV)</h3>
+                        <div class="definition">
+                            Giá trị của một khoản tiền tại một thời điểm trong tương lai.
+                        </div>
+
+                        <div class="formula">
+                            <strong>FV = PV × (1 + r)^n</strong>
+                            <br><br>
+                            • <strong>PV</strong> = Present Value (Giá trị hiện tại)<br>
+                            • <strong>r</strong> = lãi suất (interest rate)<br>
+                            • <strong>n</strong> = số năm
+                        </div>
+
+                        <h3>💻 Tương tác: Compound Interest</h3>
+                        <div class="slider-group">
+                            <label>Khoản tiền đầu tư ban đầu (PV):</label>
+                            <input type="range" id="principalSlider" min="1000" max="100000" value="10000" step="1000">
+                            <span class="slider-value" id="principalValue">$10,000</span>
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Lãi suất hàng năm (r):</label>
+                            <input type="range" id="rateSlider" min="1" max="20" value="5" step="0.5">
+                            <span class="slider-value" id="rateValue">5%</span>
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Số năm (n):</label>
+                            <input type="range" id="yearsSlider" min="1" max="50" value="10" step="1">
+                            <span class="slider-value" id="yearsValue">10 năm</span>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Kết quả tính toán</strong>
+                            <div class="example-output">
+                                <strong>Future Value = </strong><span id="fvResult">$16,288.95</span>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ cụ thể</strong>
+                            <div class="step">
+                                <strong>Bạn đầu tư: $10,000</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Lãi suất: 5% mỗi năm</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Kỳ hạn: 10 năm</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>FV = $10,000 × (1.05)^10 = $16,288.95</strong>
+                                <p style="margin: 8px 0 0 0; font-size: 13px;">Bạn kiếm được $6,288.95 từ lãi!</p>
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Lợi ích của Compound Interest:</strong>
+                            "Lãi suất lên lãi suất" - Càng đầu tư sớm, lợi ích càng lớn nhờ sức mạnh của ghép lãi theo
+                            thời gian.
+                        </div>
+                    </div>
+
+                    <!-- Present Value -->
+                    <div class="lesson" id="lesson-present-value" style="display: none;">
+                        <h2>📊 Present Value (Giá trị hiện tại)</h2>
+
+                        <div class="definition">
+                            <strong>Present Value</strong> là giá trị ngày hôm nay của một khoản tiền sẽ nhận được trong
+                            tương lai.
+                        </div>
+
+                        <h3>📌 Công thức</h3>
+                        <div class="formula">
+                            <strong>PV = FV / (1 + r)^n</strong>
+                            <br><br>
+                            Đây là công thức FV được sắp xếp lại.
+                        </div>
+
+                        <h3>💡 Tại sao quan trọng?</h3>
+                        <div class="insight">
+                            <strong>Giúp bạn quyết định:</strong> Liệu một khoản tiền ở tương lai có đáng mua/chờ đợi
+                            hay không?
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ quyết định đầu tư</strong>
+                            <div class="step">
+                                <strong>Một dự án hứa hẹn:</strong> Trả $10,000 sau 5 năm
+                            </div>
+                            <div class="step">
+                                <strong>Lãi suất thị trường hiện tại:</strong> 8%/năm
+                            </div>
+                            <div class="example-output">
+                                <strong>PV = $10,000 / (1.08)^5 = $6,805.83</strong>
+                                <p style="margin: 8px 0 0 0; font-size: 13px;">📍 Giá trị $10,000 tương lai = $6,805.83
+                                    hôm nay</p>
+                            </div>
+                        </div>
+
+                        <div class="insight">
+                            Nếu bạn có $6,805.83 ngay hôm nay, bạn có thể đầu tư vào dự án khác với lãi 8% và nhận được
+                            $10,000 sau 5 năm. Vì vậy, PV giúp bạn so sánh các cơ hội đầu tư.
+                        </div>
+                    </div>
+
+                    <!-- Risk & Return -->
+                    <div class="lesson" id="lesson-risk-return" style="display: none;">
+                        <h2>⚖️ Risk &amp; Return</h2>
+
+                        <div class="definition">
+                            <strong>Risk</strong> là độ không chắc chắn về lợi suất đầu tư.<br>
+                            <strong>Return</strong> là lợi nhuận mà bạn kiếm được từ đầu tư.
+                        </div>
+
+                        <h3>📌 Mối quan hệ Risk - Return</h3>
+                        <div class="concept-box highlight">
+                            <h4>📈 Quy luật cơ bản:</h4>
+                            <p><strong>Rủi ro cao → Lợi suất kỳ vọng cao</strong></p>
+                            <p style="margin: 8px 0 0 0;"><strong>Rủi ro thấp → Lợi suất kỳ vọng thấp</strong></p>
+                        </div>
+
+                        <h3>💡 Các loại Rủi ro</h3>
+                        <div class="step">
+                            <strong>📌 Systematic Risk (Rủi ro thị trường)</strong>
+                            <p>Ảnh hưởng đến toàn bộ thị trường (khủng hoảng kinh tế, chiến tranh)</p>
+                            <p style="margin: 8px 0 0 0; font-size: 13px; color: #666;">Không thể loại bỏ bằng
+                                diversification</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📌 Unsystematic Risk (Rủi ro riêng)</strong>
+                            <p>Ảnh hưởng riêng đến một công ty hoặc ngành (lãnh đạo kém, sản phẩm xấu)</p>
+                            <p style="margin: 8px 0 0 0; font-size: 13px; color: #666;">Có thể giảm bằng diversification
+                            </p>
+                        </div>
+
+                        <h3>📌 Tính Expected Return</h3>
+                        <div class="formula">
+                            <strong>E(R) = Σ (Probability × Return)</strong>
+                            <br><br>
+                            E(R) = (p₁ × r₁) + (p₂ × r₂) + ... + (pₙ × rₙ)
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Dự báo lợi suất cổ phiếu</strong>
+                            <div class="step">
+                                <strong>Tình huống Tốt (30% xác suất):</strong> Lợi suất = +20%
+                            </div>
+                            <div class="step">
+                                <strong>Tình huống Bình thường (50% xác suất):</strong> Lợi suất = +8%
+                            </div>
+                            <div class="step">
+                                <strong>Tình huống Xấu (20% xác suất):</strong> Lợi suất = -5%
+                            </div>
+                            <div class="example-output">
+                                <strong>E(R) = (0.30 × 20%) + (0.50 × 8%) + (0.20 × -5%)</strong>
+                                <p style="margin: 8px 0 0 0;">= 6% + 4% - 1% = <strong>9%</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>📌 Diversification:</strong>
+                            Bằng cách đầu tư vào nhiều tài sản khác nhau, bạn có thể giảm rủi ro mà không giảm quá nhiều
+                            lợi suất.
+                        </div>
+                    </div>
+
+                    <!-- Bonds vs Stocks -->
+                    <div class="lesson" id="lesson-bonds-stocks" style="display: none;">
+                        <h2>📊 Bonds vs Stocks</h2>
+
+                        <div class="concept-box">
+                            <h3>Khái niệm cơ bản</h3>
+                            <p><strong>Bond (Trái phiếu):</strong> Bạn cho một công ty/chính phủ vay tiền, họ trả lãi
+                                cho bạn</p>
+                            <p style="margin: 8px 0 0 0;"><strong>Stock (Cổ phiếu):</strong> Bạn sở hữu một phần của
+                                công ty, chia sẻ lợi nhuận</p>
+                        </div>
+
+                        <h3>📌 So sánh chi tiết</h3>
+                        <div class="step">
+                            <strong>💰 Bond (Trái phiếu)</strong>
+                            <p>• Rủi ro: Thấp</p>
+                            <p>• Lợi suất: Thấp nhưng chắc chắn (lãi suất cố định)</p>
+                            <p>• Tính chất: Công cụ nợ</p>
+                            <p>• Ưu điểm: An toàn, dự đoán được</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📈 Stock (Cổ phiếu)</strong>
+                            <p>• Rủi ro: Cao</p>
+                            <p>• Lợi suất: Cao nhưng không chắc chắn</p>
+                            <p>• Tính chất: Công cụ vốn</p>
+                            <p>• Ưu điểm: Tiềm năng tăng trưởng lớn</p>
+                        </div>
+
+                        <h3>💡 Ai nên chọn cái nào?</h3>
+                        <div class="insight">
+                            <strong>👴 Người về hưu:</strong> Nên chọn Bond (an toàn, ổn định)<br>
+                            <strong>👨 Người trẻ:</strong> Nên chọn Stock (thời gian dài, có thể chịu rủi ro)
+                        </div>
+
+                        <div class="key-point">
+                            <strong>📌 Chiến lược cân bằng (Balanced Portfolio):</strong>
+                            Đầu tư vào cả Bond và Stock theo tỷ lệ phù hợp với mức độ chấp nhận rủi ro của bạn.
+                        </div>
+                    </div>
+
+                    <!-- Bond Pricing & Yield Curve -->
+                    <div class="lesson" id="lesson-bond-pricing" style="display: none;">
+                        <h2>💳 Bond Pricing & Yield Curve</h2>
+
+                        <div class="definition">
+                            <strong>Bond Pricing:</strong> Giá của trái phiếu = PV của tất cả coupon payments + PV của
+                            mệnh giá
+                        </div>
+
+                        <h3>📌 Công thức định giá Bond</h3>
+                        <div class="formula">
+                            <strong>P = Σ[C/(1+y)^t] + M/(1+y)^n</strong><br><br>
+                            C = coupon hàng năm<br>
+                            y = yield to maturity (YTM)<br>
+                            M = mệnh giá (par value)<br>
+                            n = năm tới hạn
+                        </div>
+
+                        <h3>📌 Mối quan hệ P – Yield</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>Khi yield (y) ↑ → Giá bond (P) ↓</strong> (nghịch đảo)</p>
+                            <p style="margin: 8px 0 0 0;">Tại sao? Coupon cố định nhưng giá trị hiện tại giảm</p>
+                        </div>
+
+                        <h3>📌 Par, Premium, Discount</h3>
+                        <div class="step">
+                            <strong>📍 Bond ở giá par (P = M)</strong>
+                            <p style="margin: 8px 0 0 0;">Coupon rate = YTM</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Premium Bond (P > M)</strong>
+                            <p style="margin: 8px 0 0 0;">Coupon rate > YTM (trái phiếu cũ, lãi cao)</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Discount Bond (P < M)</strong>
+                                    <p style="margin: 8px 0 0 0;">Coupon rate < YTM (trái phiếu mới, lãi cao)</p>
+                        </div>
+
+                        <h3>📌 Yield Curve</h3>
+                        <div class="definition">
+                            <strong>Yield curve:</strong> Đồ thị liên hệ giữa YTM và thời gian tới hạn (maturity)
+                        </div>
+
+                        <div class="concept-box">
+                            <p><strong>Hình dạng thông thường (Normal):</strong> Dốc lên (lãi suất dài hạn > ngắn hạn)
+                            </p>
+                            <p style="margin: 8px 0 0 0;"><strong>Flat:</strong> Lãi suất như nhau mọi kỳ hạn</p>
+                            <p style="margin: 8px 0 0 0;"><strong>Inverted:</strong> Dốc xuống (dấu hiệu suy thoái)</p>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ tính giá bond</strong>
+                            <div class="step">
+                                <strong>Bond 10 năm, coupon 5%, mệnh giá $1000</strong>
+                            </div>
+                            <div class="step">
+                                <strong>YTM hiện tại = 6%</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>P = 50/(1.06) + 50/(1.06)^2 + ... + 1050/(1.06)^10 ≈ $926</strong><br>
+                                Discount bond (coupon 5% < YTM 6%) </div>
+                            </div>
+
+                            <div class="key-point">
+                                <strong>📌 Lãi suất tăng → Giá bond cũ giảm (mất lợi khi bán trước hạn)</strong>
+                            </div>
+                        </div>
+
+                        <!-- Duration & Convexity -->
+                        <div class="lesson" id="lesson-duration-convexity" style="display: none;">
+                            <h2>📐 Duration & Convexity (Đo rủi ro lãi suất)</h2>
+
+                            <div class="definition">
+                                <strong>Duration:</strong> Thời gian bình quân nhân vốn của bond (tính bằng năm)
+                            </div>
+
+                            <h3>📌 Modified Duration</h3>
+                            <div class="formula">
+                                <strong>D_mod = Macaulay D / (1 + y)</strong><br><br>
+                                Đo độ nhạy cảm: ΔP/P ≈ -D_mod × Δy
+                            </div>
+
+                            <h3>📌 Ý nghĩa</h3>
+                            <div class="concept-box highlight">
+                                <p><strong>Nếu D_mod = 7:</strong></p>
+                                <p style="margin: 8px 0 0 0;">Yield ↑ 1% → Giá bond ↓ 7%</p>
+                                <p style="margin: 8px 0 0 0;">Yield ↓ 1% → Giá bond ↑ 7%</p>
+                            </div>
+
+                            <h3>📌 Convexity</h3>
+                            <div class="definition">
+                                <strong>Convexity:</strong> Độ cong của mối quan hệ price-yield (xấp xỉ bậc 2)
+                            </div>
+
+                            <div class="formula">
+                                <strong>ΔP/P ≈ -D_mod × Δy + 0.5 × C × (Δy)^2</strong><br><br>
+                                C = convexity (luôn dương cho bond)
+                            </div>
+
+                            <h3>📌 Tác động Convexity</h3>
+                            <div class="concept-box">
+                                <p><strong>Duration-only xấp xỉ:</strong> Hợp lệ cho Δy nhỏ</p>
+                                <p style="margin: 8px 0 0 0;"><strong>Duration + Convexity:</strong> Chính xác hơn cho
+                                    Δy lớn</p>
+                                <p style="margin: 8px 0 0 0;"><strong>Convexity effect dương:</strong> Khi Δy lớn → Giá
+                                    ↑ nhiều hơn (yield ↓) hoặc ↓ ít hơn (yield ↑)</p>
+                            </div>
+
+                            <div class="example">
+                                <strong>✏️ Ví dụ</strong>
+                                <div class="step">
+                                    <strong>Bond: P = 100, D_mod = 7, C = 120</strong>
+                                </div>
+                                <div class="step">
+                                    <strong>Yield ↑ 2% (Δy = 0.02)</strong>
+                                </div>
+                                <div class="step">
+                                    <strong>Duration-only:</strong> ΔP/P = -7 × 0.02 = -14% → P ≈ 86
+                                </div>
+                                <div class="example-output">
+                                    <strong>Duration + Convexity:</strong><br>
+                                    ΔP/P = -7(0.02) + 0.5 × 120 × (0.02)^2<br>
+                                    = -0.14 + 0.024 = -0.116 → P ≈ 88.4<br>
+                                    (Convexity giúp hạn chế tổn thất)
+                                </div>
+                            </div>
+
+                            <div class="key-point">
+                                <strong>📌 Quản lý danh mục:</strong> Chọn bond với duration phù hợp với horizont đầu tư
+                                để tối thiểu hóa rủi ro lãi suất
+                            </div>
+                        </div>
+
+                        <!-- Mean-Variance Portfolio -->
+                        <div class="lesson" id="lesson-portfolio-2asset" style="display: none;">
+                            <h2>📊 Mean–Variance Portfolio (2 assets)</h2>
+
+                            <div class="definition">
+                                <strong>Mean-Variance Analysis:</strong> Chọn danh mục tối ưu bằng cách cân bằng lợi
+                                suất kỳ vọng (return) và rủi ro (variance)
+                            </div>
+
+                            <h3>📌 Danh mục 2 tài sản</h3>
+                            <div class="formula">
+                                <strong>R_p = w₁R₁ + w₂R₂</strong><br><br>
+                                w₁ + w₂ = 1 (ràng buộc trọng số)<br>
+                                E(R_p) = w₁E(R₁) + w₂E(R₂)
+                            </div>
+
+                            <h3>📌 Phương sai danh mục</h3>
+                            <div class="formula">
+                                <strong>σ_p² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂ρ₁₂σ₁σ₂</strong><br><br>
+                                ρ₁₂ = tương quan giữa 2 tài sản (-1 ≤ ρ ≤ 1)
+                            </div>
+
+                            <h3>📌 Hiệu ứng Diversification</h3>
+                            <div class="concept-box highlight">
+                                <p><strong>Nếu ρ₁₂ < 1:</strong> Danh mục σ < weighted average của σ₁ và σ₂</p>
+                                                <p style="margin: 8px 0 0 0;">→ Diversification giảm rủi ro!</p>
+                                                <p style="margin: 8px 0 0 0;"><strong>Nếu ρ₁₂ = -1:</strong> Có thể tạo
+                                                    danh mục rủi ro = 0 (hoàn hảo hedge)</p>
+                            </div>
+
+                            <h3>💻 Mô phỏng: Thay đổi trọng số</h3>
+                            <div class="slider-group">
+                                <label>Trọng số Asset 1 (w₁): <span id="pf-w1-val">50</span>%</label>
+                                <input type="range" id="pf-w1" min="0" max="100" value="50" step="5">
+                            </div>
+
+                            <div class="visual-demo">
+                                <svg class="svg-container" viewBox="0 0 450 320" preserveAspectRatio="xMidYMid meet">
+                                    <g stroke="#e0e0e0" stroke-width="1">
+                                        <line x1="40" y1="250" x2="420" y2="250" />
+                                        <line x1="40" y1="30" x2="40" y2="250" />
+                                    </g>
+                                    <text x="425" y="255" font-size="12" fill="#666">σ (Risk)</text>
+                                    <text x="15" y="25" font-size="12" fill="#666">E(R)</text>
+
+                                    <!-- Asset 1 -->
+                                    <circle cx="120" cy="180" r="4" fill="#2c5aa0" />
+                                    <text x="115" y="200" font-size="11" fill="#2c5aa0">Asset 1</text>
+
+                                    <!-- Asset 2 -->
+                                    <circle cx="340" cy="100" r="4" fill="#ff6b35" />
+                                    <text x="335" y="120" font-size="11" fill="#ff6b35">Asset 2</text>
+
+                                    <!-- Efficient frontier (cung portfolio) -->
+                                    <path id="pf-frontier" d="M 120 180 Q 200 150 340 100" stroke="#04a777"
+                                        stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+                                    <!-- Current portfolio -->
+                                    <circle id="pf-current" cx="220" cy="150" r="4" fill="#dc2626" />
+                                    <text x="230" y="145" font-size="11" fill="#dc2626">Portfolio</text>
+                                </svg>
+                            </div>
+
+                            <div class="example">
+                                <strong>✏️ Ví dụ cụ thể</strong>
+                                <div class="step">
+                                    <strong>Asset 1: E(R₁) = 8%, σ₁ = 10%</strong>
+                                </div>
+                                <div class="step">
+                                    <strong>Asset 2: E(R₂) = 15%, σ₂ = 20%</strong>
+                                </div>
+                                <div class="step">
+                                    <strong>ρ₁₂ = 0.3</strong>
+                                </div>
+                                <div class="step">
+                                    <strong>Trọng số: w₁ = 60%, w₂ = 40%</strong>
+                                </div>
+                                <div class="example-output">
+                                    <strong>E(R_p) = 0.6(8%) + 0.4(15%) = 10.8%</strong><br>
+                                    <strong>σ_p² = 0.36(100) + 0.16(400) + 2(0.6)(0.4)(0.3)(10)(20) = 105.6</strong><br>
+                                    <strong>σ_p = 10.28%</strong><br>
+                                    → Rủi ro < weighted average (10.0 + 8.0=18%), nhờ diversification! </div>
+                                </div>
+
+                                <div class="key-point">
+                                    <strong>🎯 Efficient Frontier:</strong> Là tập hợp các danh mục tối ưu (max return
+                                    cho mỗi mức risk). Nhà đầu tư chọn trên frontier tùy theo khả năng chịu rủi ro.
+                                </div>
+                            </div>
+
+                            <!-- CAPM -->
+                            <div class="lesson" id="lesson-capm" style="display: none;">
+                                <h2>📈 CAPM & Beta</h2>
+
+                                <div class="definition">
+                                    <strong>CAPM (Capital Asset Pricing Model):</strong> Mô hình xác định lợi suất kỳ
+                                    vọng của một tài sản dựa trên rủi ro hệ thống của nó (beta)
+                                </div>
+
+                                <h3>📌 Công thức CAPM</h3>
+                                <div class="formula">
+                                    <strong>E(R) = R_f + β[E(R_m) - R_f]</strong><br><br>
+                                    R_f = lãi suất phi rủi ro (risk-free)<br>
+                                    β = beta (rủi ro hệ thống)<br>
+                                    E(R_m) - R_f = risk premium thị trường
+                                </div>
+
+                                <h3>📌 Beta</h3>
+                                <div class="definition">
+                                    <strong>Beta:</strong> Độ nhạy cảm của tài sản so với thị trường
+                                </div>
+
+                                <div class="concept-box highlight">
+                                    <p><strong>β = 1:</strong> Tài sản dao động cùng thị trường</p>
+                                    <p style="margin: 8px 0 0 0;"><strong>β > 1:</strong> Tài sản rủi ro (volatile) hơn
+                                        thị trường</p>
+                                    <p style="margin: 8px 0 0 0;"><strong>β < 1:</strong> Tài sản ổn định hơn thị trường
+                                    </p>
+                                    <p style="margin: 8px 0 0 0;"><strong>β = 0:</strong> Không tương quan với thị
+                                        trường (ví dụ: lãi suất phi rủi ro)</p>
+                                </div>
+
+                                <h3>📌 Ý nghĩa CAPM</h3>
+                                <div class="concept-box">
+                                    <p><strong>Tài sản rủi ro cao (β lớn):</strong> Lợi suất kỳ vọng phải cao để bù rủi
+                                        ro</p>
+                                    <p style="margin: 8px 0 0 0;"><strong>Tài sản ổn định (β nhỏ):</strong> Lợi suất
+                                        thấp nhưng chắc chắn</p>
+                                </div>
+
+                                <div class="example">
+                                    <strong>✏️ Ví dụ tính toán</strong>
+                                    <div class="step">
+                                        <strong>R_f = 3% (lãi suất phi rủi ro)</strong>
+                                    </div>
+                                    <div class="step">
+                                        <strong>E(R_m) = 10% (lợi suất thị trường)</strong>
+                                    </div>
+                                    <div class="step">
+                                        <strong>Risk premium = 10% - 3% = 7%</strong>
+                                    </div>
+                                    <div class="step">
+                                        <strong>Cổ phiếu A có β = 1.5</strong>
+                                    </div>
+                                    <div class="example-output">
+                                        <strong>E(R_A) = 3% + 1.5(7%) = 3% + 10.5% = 13.5%</strong><br>
+                                        (Cổ phiếu rủi ro → Lợi suất cao)
+                                    </div>
+                                </div>
+
+                                <h3>📌 Security Market Line (SML)</h3>
+                                <div class="definition">
+                                    <strong>SML:</strong> Đồ thị CAPM, thể hiện mối quan hệ tuyến tính giữa β và E(R)
+                                </div>
+
+                                <div class="insight">
+                                    <strong>💡 Định giá:</strong><br>
+                                    • Nếu E(R) thực tế > SML → Cổ phiếu undervalued (mua)<br>
+                                    • Nếu E(R) thực tế < SML → Cổ phiếu overvalued (bán) </div>
+
+                                        <div class="key-point">
+                                            <strong>🎯 Điểm chính:</strong> CAPM giúp nhà đầu tư xác định liệu lợi suất
+                                            một tài sản có bù đắp rủi ro hay không.
+                                        </div>
+                                </div>
+
+                                <!-- Options Payoff -->
+                                <div class="lesson" id="lesson-options-payoff" style="display: none;">
+                                    <h2>📊 Options Payoff Diagram</h2>
+
+                                    <div class="definition">
+                                        <strong>Option:</strong> Quyền (nhưng không bắt buộc) mua/bán một tài sản ở một
+                                        giá nhất định (strike) tại hoặc trước ngày hết hạn
+                                    </div>
+
+                                    <h3>📌 Loại Option</h3>
+                                    <div class="step">
+                                        <strong>📍 Call Option</strong>
+                                        <p>Quyền <strong>mua</strong> tài sản ở giá strike K</p>
+                                    </div>
+
+                                    <div class="step">
+                                        <strong>📍 Put Option</strong>
+                                        <p>Quyền <strong>bán</strong> tài sản ở giá strike K</p>
+                                    </div>
+
+                                    <h3>📌 Payoff tại hạn (Expiration)</h3>
+                                    <div class="formula">
+                                        <strong>Call Payoff = max(S - K, 0)</strong> (mua nếu S > K)<br><br>
+                                        <strong>Put Payoff = max(K - S, 0)</strong> (bán nếu S < K)<br><br>
+                                            S = giá tài sản tại hạn, K = strike price
+                                    </div>
+
+                                    <h3>📌 Long vs Short</h3>
+                                    <div class="step">
+                                        <strong>📍 Long Call</strong>
+                                        <p>Mua quyền mua → Lợi suất không giới hạn (S ↑), mất tối đa là premium</p>
+                                    </div>
+
+                                    <div class="step">
+                                        <strong>📍 Long Put</strong>
+                                        <p>Mua quyền bán → Lợi nhuận tối đa (nếu S = 0), mất tối đa là premium</p>
+                                    </div>
+
+                                    <div class="step">
+                                        <strong>📍 Short Call</strong>
+                                        <p>Bán quyền mua → Thu premium, nhưng rủi ro không giới hạn (S ↑ → thua)</p>
+                                    </div>
+
+                                    <div class="step">
+                                        <strong>📍 Short Put</strong>
+                                        <p>Bán quyền bán → Thu premium, rủi ro tối đa khi S = 0</p>
+                                    </div>
+
+                                    <h3>💻 Mô phỏng: Long Call</h3>
+                                    <div class="slider-group">
+                                        <label>Strike Price (K): <span id="opt-K-val">50</span></label>
+                                        <input type="range" id="opt-K" min="30" max="70" value="50" step="5">
+                                    </div>
+
+                                    <div class="slider-group">
+                                        <label>Premium (C): <span id="opt-C-val">3</span></label>
+                                        <input type="range" id="opt-C" min="1" max="10" value="3" step="0.5">
+                                    </div>
+
+                                    <div class="visual-demo">
+                                        <svg class="svg-container" viewBox="0 0 450 300"
+                                            preserveAspectRatio="xMidYMid meet">
+                                            <g stroke="#e0e0e0" stroke-width="1">
+                                                <line x1="40" y1="150" x2="420" y2="150" />
+                                                <line x1="40" y1="30" x2="40" y2="270" />
+                                            </g>
+                                            <text x="425" y="155" font-size="12" fill="#666">S</text>
+                                            <text x="15" y="25" font-size="12" fill="#666">Payoff</text>
+
+                                            <!-- Payoff line (call) -->
+                                            <polyline id="opt-payoff" points="40,130 150,130 350,50" stroke="#2c5aa0"
+                                                stroke-width="2.5" fill="none" />
+
+                                            <!-- Strike line -->
+                                            <line id="opt-strike" x1="150" y1="30" x2="150" y2="270" stroke="#ff6b35"
+                                                stroke-width="1.5" stroke-dasharray="3,3" />
+                                            <text x="145" y="290" font-size="11" fill="#ff6b35">K</text>
+
+                                            <!-- Breakeven -->
+                                            <circle id="opt-breakeven" cx="165" cy="140" r="3" fill="#04a777" />
+
+                                            <text x="250" y="50" fill="#2c5aa0" font-weight="bold" font-size="11">Long
+                                                Call</text>
+                                        </svg>
+                                    </div>
+
+                                    <div class="example">
+                                        <strong>✏️ Ví dụ Long Call</strong>
+                                        <div class="step">
+                                            <strong>Strike K = $50, Premium C = $3</strong>
+                                        </div>
+                                        <div class="step">
+                                            <strong>Tại hạn: Giá cổ phiếu S = $60</strong>
+                                        </div>
+                                        <div class="example-output">
+                                            <strong>Payoff = max(60 - 50, 0) = $10</strong><br>
+                                            <strong>Lợi nhuận = 10 - 3 = $7 (tính từ premium)</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="key-point">
+                                        <strong>🎯 Khi sử dụng option:</strong><br>
+                                        • <strong>Long call:</strong> Kỳ vọng giá lên, nhưng rủi ro giới hạn<br>
+                                        • <strong>Long put:</strong> Bảo vệ danh mục khỏi giảm giá (insurance)<br>
+                                        • <strong>Short call/put:</strong> Sinh lợi từ premium (seller strategy)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+
+        <!-- Mathematics Section -->
+        <section id="mathematics" class="section">
+            <div class="lesson-container">
+                <div class="lesson-sidebar">
+                    <h4>📖 Các bài học</h4>
+                    <ul class="lesson-list">
+                        <li class="lesson-item active" data-lesson="functions">
+                            <strong>Functions</strong>
+                            <small>Cơ bản</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="derivatives">
+                            <strong>Derivatives</strong>
+                            <small>Trung bình</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="optimization">
+                            <strong>Optimization</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="statistics">
+                            <strong>Statistics Basics</strong>
+                            <small>Trung bình</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="probability">
+                            <strong>Probability</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="multivariate-calculus">
+                            <strong>Partial Derivatives & Gradients</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="integral-surplus">
+                            <strong>Integral & Consumer Surplus</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="ols-regression">
+                            <strong>OLS Regression Intuition</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                        <li class="lesson-item" data-lesson="hypothesis-testing">
+                            <strong>Hypothesis Testing & p-value</strong>
+                            <small>Nâng cao</small>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lesson-content">
+                    <!-- Functions -->
+                    <div class="lesson" id="lesson-functions" style="display: block;">
+                        <h2>📈 Functions (Hàm số)</h2>
+
+                        <div class="definition">
+                            <strong>Hàm số</strong> là mối quan hệ giữa hai biến, mỗi đầu vào (x) tương ứng với duy nhất
+                            một đầu ra (y).
+                        </div>
+
+                        <h3>📌 Ký hiệu</h3>
+                        <div class="formula">
+                            <strong>y = f(x)</strong>
+                            <br><br>
+                            Đọc là: "y bằng f của x" hoặc "y là hàm của x"
+                        </div>
+
+                        <h3>💡 Các loại hàm số cơ bản</h3>
+                        <div class="step">
+                            <strong>📍 Hàm tuyến tính (Linear Function)</strong>
+                            <div class="formula" style="margin-top: 8px;">y = mx + b</div>
+                            <p style="margin: 8px 0 0 0;">m = độ dốc (slope), b = giao điểm y (y-intercept)</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Hàm bậc hai (Quadratic Function)</strong>
+                            <div class="formula" style="margin-top: 8px;">y = ax² + bx + c</div>
+                            <p style="margin: 8px 0 0 0;">Đồ thị là một đường parabol</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Hàm mũ (Exponential Function)</strong>
+                            <div class="formula" style="margin-top: 8px;">y = a × b^x</div>
+                            <p style="margin: 8px 0 0 0;">Tăng trưởng nhanh (tính lãi suất kép)</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Hàm logarit (Logarithmic Function)</strong>
+                            <div class="formula" style="margin-top: 8px;">y = log(x) hoặc y = ln(x)</div>
+                            <p style="margin: 8px 0 0 0;">Hàm ngược của hàm mũ</p>
+                        </div>
+
+                        <h3>💻 Tương tác: Hàm tuyến tính</h3>
+                        <div class="slider-group">
+                            <label>Độ dốc (m):</label>
+                            <input type="range" id="slopeSlider" min="-3" max="3" value="2" step="0.5">
+                            <span class="slider-value" id="slopeValue">2</span>
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Giao điểm Y (b):</label>
+                            <input type="range" id="interceptSlider" min="-100" max="100" value="20" step="5">
+                            <span class="slider-value" id="interceptValue">20</span>
+                        </div>
+
+                        <div class="visual-demo">
+                            <svg class="svg-container" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet">
+                                <!-- Grid -->
+                                <g stroke="#e0e0e0" stroke-width="1">
+                                    <line x1="50" y1="200" x2="450" y2="200" />
+                                    <line x1="250" y1="50" x2="250" y2="350" />
+                                </g>
+
+                                <!-- Axes -->
+                                <text x="460" y="205" fill="#666">X</text>
+                                <text x="255" y="35" fill="#666">Y</text>
+
+                                <!-- Line -->
+                                <polyline id="functionLine" points="50,340 450,60" stroke="#2c5aa0" stroke-width="3"
+                                    fill="none" stroke-linecap="round" />
+
+                                <!-- Y intercept point -->
+                                <circle cx="250" cy="200" r="5" fill="#ff6b35" stroke="#fff" stroke-width="2" />
+
+                                <text x="250" y="330" text-anchor="middle" fill="#666" font-size="12">y = mx + b</text>
+                            </svg>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Hàm cầu (Demand Function)</strong>
+                            <div class="step">
+                                <strong>Phương trình:</strong> Q = 100 - 5P
+                            </div>
+                            <div class="step">
+                                <strong>P = giá, Q = lượng cầu</strong>
+                            </div>
+                            <div class="example-input">
+                                <p>Nếu giá P = 10:</p>
+                                <p>Q = 100 - 5(10) = 100 - 50 = 50 đơn vị</p>
+                            </div>
+                            <div class="example-output">
+                                <strong>Ý nghĩa:</strong> Khi giá là 10, cầu là 50 đơn vị
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Tại sao quan trọng với kinh tế:</strong>
+                            Hàm số giúp mô hình hóa mối quan hệ kinh tế (cầu, cung, chi phí, doanh thu) một cách chính
+                            xác.
+                        </div>
+                    </div>
+
+                    <!-- Derivatives -->
+                    <div class="lesson" id="lesson-derivatives" style="display: none;">
+                        <h2>📐 Derivatives (Đạo hàm)</h2>
+
+                        <div class="definition">
+                            <strong>Đạo hàm</strong> đo lường tốc độ thay đổi của một hàm số tại một điểm nhất định.
+                        </div>
+
+                        <h3>📌 Ký hiệu</h3>
+                        <div class="formula">
+                            <strong>dy/dx</strong> hoặc <strong>f'(x)</strong>
+                            <br><br>
+                            Đọc: "đạo hàm của y theo x"
+                        </div>
+
+                        <h3>💡 Ý nghĩa hình học</h3>
+                        <div class="concept-box highlight">
+                            <p>Đạo hàm tại một điểm = độ dốc (slope) của đường tiếp tuyến tại điểm đó</p>
+                        </div>
+
+                        <h3>📌 Các quy tắc đạo hàm cơ bản</h3>
+                        <div class="step">
+                            <strong>📍 Hàm hằng</strong>
+                            <div class="formula" style="margin-top: 8px;">f(x) = c → f'(x) = 0</div>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Hàm lũy thừa (Power Rule)</strong>
+                            <div class="formula" style="margin-top: 8px;">f(x) = x^n → f'(x) = n×x^(n-1)</div>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Quy tắc tổng</strong>
+                            <div class="formula" style="margin-top: 8px;">[f(x) + g(x)]' = f'(x) + g'(x)</div>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ tính đạo hàm</strong>
+                            <div class="step">
+                                <strong>f(x) = 3x² + 2x + 5</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>f'(x) = 6x + 2</strong>
+                                <p style="margin: 8px 0 0 0; font-size: 13px;">Tại x = 3: f'(3) = 6(3) + 2 = 20</p>
+                            </div>
+                        </div>
+
+                        <h3>💡 Ứng dụng trong kinh tế</h3>
+                        <div class="insight">
+                            <strong>📌 Marginal Cost (Chi phí cận biên):</strong> dTC/dQ<br>
+                            <strong>📌 Marginal Revenue (Doanh thu cận biên):</strong> dTR/dQ<br>
+                            <strong>📌 Elasticity (Độ co giãn):</strong> (dQ/dP) × (P/Q)
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Điểm chính:</strong>
+                            Đạo hàm giúp hiểu tốc độ thay đổi - rất quan trọng trong tối ưu hóa chi phí, lợi nhuận và
+                            các quyết định kinh doanh.
+                        </div>
+                    </div>
+
+                    <!-- Optimization -->
+                    <div class="lesson" id="lesson-optimization" style="display: none;">
+                        <h2>🎯 Optimization (Tối ưu hóa)</h2>
+
+                        <div class="concept-box">
+                            <h3>Định nghĩa</h3>
+                            <p><strong>Optimization</strong> là tìm giá trị lớn nhất (maximum) hoặc nhỏ nhất (minimum)
+                                của một hàm.</p>
+                        </div>
+
+                        <h3>📌 Cách tìm Maximum/Minimum</h3>
+                        <div class="step">
+                            <strong>Bước 1:</strong> Tính đạo hàm f'(x)
+                        </div>
+
+                        <div class="step">
+                            <strong>Bước 2:</strong> Cho f'(x) = 0 và giải phương trình
+                        </div>
+
+                        <div class="step">
+                            <strong>Bước 3:</strong> Tính đạo hàm bậc 2 f''(x)
+                            <p style="margin: 8px 0 0 0; font-size: 13px;">• f''(x) &gt; 0 → Điểm cực tiểu (minimum)</p>
+                            <p style="font-size: 13px;">• f''(x) &lt; 0 → Điểm cực đại (maximum)</p>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Tối ưu hóa lợi nhuận</strong>
+                            <div class="step">
+                                <strong>Hàm lợi nhuận:</strong> π = -2Q² + 100Q - 500
+                            </div>
+                            <div class="step">
+                                <strong>Bước 1:</strong> π' = -4Q + 100
+                            </div>
+                            <div class="step">
+                                <strong>Bước 2:</strong> -4Q + 100 = 0 → Q = 25
+                            </div>
+                            <div class="step">
+                                <strong>Bước 3:</strong> π'' = -4 &lt; 0 → Q = 25 là maximum
+                            </div>
+                            <div class="example-output">
+                                <strong>Kết luận:</strong> Lợi nhuận lớn nhất khi sản xuất 25 đơn vị
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>📌 Ứng dụng kinh doanh:</strong>
+                            Công ty sử dụng optimization để tìm mức sản xuất tối ưu nhằm tối đa hóa lợi nhuận hoặc giảm
+                            chi phí.
+                        </div>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="lesson" id="lesson-statistics" style="display: none;">
+                        <h2>📊 Statistics Basics</h2>
+
+                        <div class="definition">
+                            <strong>Thống kê</strong> là khoa học phân tích dữ liệu để hiểu rõ các mẫu và xu hướng.
+                        </div>
+
+                        <h3>📌 Các phép đo thống kê cơ bản</h3>
+                        <div class="step">
+                            <strong>📍 Mean (Trung bình)</strong>
+                            <div class="formula" style="margin-top: 8px;">Mean = Σx / n</div>
+                            <p style="margin: 8px 0 0 0; font-size: 13px;">Tổng tất cả giá trị ÷ số lượng giá trị</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Median (Trung vị)</strong>
+                            <p>Giá trị ở giữa khi sắp xếp dữ liệu theo thứ tự</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Mode (Mốt)</strong>
+                            <p>Giá trị xuất hiện nhiều nhất</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Standard Deviation (Độ lệch chuẩn)</strong>
+                            <div class="formula" style="margin-top: 8px;">σ = √[Σ(x - μ)² / n]</div>
+                            <p style="margin: 8px 0 0 0; font-size: 13px;">Đo mức độ phân tán dữ liệu</p>
+                        </div>
+
+                        <h3>💡 Ý nghĩa</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>σ nhỏ:</strong> Dữ liệu tập trung gần trung bình (ổn định)</p>
+                            <p style="margin: 8px 0 0 0;"><strong>σ lớn:</strong> Dữ liệu phân tán (không ổn định, rủi
+                                ro cao)</p>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Lợi suất cổ phiếu</strong>
+                            <div class="step">
+                                <strong>Cổ phiếu A:</strong> Lợi suất = 10%, 12%, 9%, 11%, 8%
+                            </div>
+                            <div class="step">
+                                <strong>Cổ phiếu B:</strong> Lợi suất = 5%, 15%, 20%, 2%, 8%
+                            </div>
+                            <div class="example-output">
+                                <strong>Mean của cả hai:</strong> 10%
+                                <p style="margin: 8px 0 0 0; font-size: 13px;">Nhưng Cổ phiếu A ổn định hơn (σ nhỏ), Cổ
+                                    phiếu B rủi ro hơn (σ lớn)</p>
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>📌 Ứng dụng tài chính:</strong>
+                            Dùng độ lệch chuẩn để đánh giá rủi ro của đầu tư.
+                        </div>
+                    </div>
+
+                    <!-- Probability -->
+                    <div class="lesson" id="lesson-probability" style="display: none;">
+                        <h2>🎲 Probability (Xác suất)</h2>
+
+                        <div class="definition">
+                            <strong>Xác suất</strong> là khả năng xảy ra của một sự kiện, từ 0 (không thể) đến 1 (chắc
+                            chắn).
+                        </div>
+
+                        <h3>📌 Công thức cơ bản</h3>
+                        <div class="formula">
+                            <strong>P(A) = (Số kết quả thuận lợi) / (Tổng số kết quả có thể)</strong>
+                        </div>
+
+                        <h3>📌 Các quy tắc xác suất</h3>
+                        <div class="step">
+                            <strong>📍 Quy tắc cộng (Addition Rule)</strong>
+                            <div class="formula" style="margin-top: 8px;">P(A hoặc B) = P(A) + P(B) - P(A và B)</div>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Quy tắc nhân (Multiplication Rule)</strong>
+                            <div class="formula" style="margin-top: 8px;">P(A và B) = P(A) × P(B|A)</div>
+                            <p style="margin: 8px 0 0 0; font-size: 13px;">P(B|A) = xác suất B xảy ra biết A đã xảy ra
+                            </p>
+                        </div>
+
+                        <div class="step">
+                            <strong>📍 Xác suất bổ sung (Complement)</strong>
+                            <div class="formula" style="margin-top: 8px;">P(không A) = 1 - P(A)</div>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Tung xúc xắc</strong>
+                            <div class="step">
+                                <strong>P(lấy số 6) = 1/6 ≈ 16.67%</strong>
+                            </div>
+                            <div class="step">
+                                <strong>P(không lấy số 6) = 1 - 1/6 = 5/6 ≈ 83.33%</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>P(lấy số chẵn) = P(2) + P(4) + P(6) = 1/6 + 1/6 + 1/6 = 1/2</strong>
+                            </div>
+                        </div>
+
+                        <div class="insight">
+                            <strong>💡 Ứng dụng trong tài chính:</strong>
+                            Dùng xác suất để tính kỳ vọng lợi suất (Expected Return), phân tích rủi ro, và định giá tài
+                            sản.
+                        </div>
+
+                        <div class="key-point">
+                            <strong>📌 Phân phối chuẩn (Normal Distribution):</strong>
+                            Rất nhiều hiện tượng trong đời thực (chiều cao, IQ, lợi suất cổ phiếu) tuân theo phân phối
+                            chuẩn - hình chuông đối xứng.
+                        </div>
+                    </div>
+
+                    <!-- Multivariate Calculus -->
+                    <div class="lesson" id="lesson-multivariate-calculus" style="display: none;">
+                        <h2>🏔️ Partial Derivatives & Gradients</h2>
+
+                        <div class="concept-box">
+                            <h3>Từ 1 biến → Nhiều biến</h3>
+                            <p><strong>Hàm nhiều biến:</strong> z = f(x, y) hoặc hơn</p>
+                            <p style="margin-top: 8px;"><strong>Câu hỏi:</strong> Khi x thay đổi (y cố định), z thay đổi
+                                như thế nào?</p>
+                        </div>
+
+                        <h3>📌 Đạo hàm riêng (Partial Derivative)</h3>
+                        <div class="formula">
+                            <strong>∂f/∂x</strong> = đạo hàm của f theo x (coi y là hằng số)<br><br>
+                            <strong>∂f/∂y</strong> = đạo hàm của f theo y (coi x là hằng số)
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ</strong>
+                            <div class="step">
+                                <strong>f(x, y) = 3x²y + 2y²</strong>
+                            </div>
+                            <div class="step">
+                                <strong>∂f/∂x = 6xy</strong> (y là hằng số)
+                            </div>
+                            <div class="step">
+                                <strong>∂f/∂y = 3x² + 4y</strong> (x là hằng số)
+                            </div>
+                        </div>
+
+                        <h3>📌 Gradient (Vector đạo hàm)</h3>
+                        <div class="formula">
+                            <strong>∇f = (∂f/∂x, ∂f/∂y)</strong><br><br>
+                            Chỉ ra hướng tăng nhanh nhất của hàm
+                        </div>
+
+                        <h3>💡 Ứng dụng kinh tế</h3>
+                        <div class="insight">
+                            <strong>Hàm lợi nhuận:</strong> π(x, y) = 100x + 80y - x² - y²<br>
+                            <strong>∂π/∂x = 100 - 2x</strong> (doanh thu cận biên từ x)<br>
+                            <strong>∂π/∂y = 80 - 2y</strong> (doanh thu cận biên từ y)<br>
+                            <strong>Tối ưu:</strong> ∂π/∂x = 0 và ∂π/∂y = 0 → x = 50, y = 40
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Tối ưu hóa nhiều biến:</strong> Tìm điểm mà tất cả partial derivatives = 0 (điểm
+                            dừng)
+                        </div>
+                    </div>
+
+                    <!-- Integral & Surplus -->
+                    <div class="lesson" id="lesson-integral-surplus" style="display: none;">
+                        <h2>📐 Integral & Consumer/Producer Surplus</h2>
+
+                        <div class="definition">
+                            <strong>Integral (Tích phân):</strong> Là phép toán ngược của đạo hàm, dùng để tính diện
+                            tích dưới đường cong
+                        </div>
+
+                        <h3>📌 Tích phân xác định</h3>
+                        <div class="formula">
+                            <strong>∫_a^b f(x)dx = [F(x)]_a^b = F(b) - F(a)</strong><br><br>
+                            F(x) = hàm nguyên hàm (antiderivative)
+                        </div>
+
+                        <h3>📌 Consumer Surplus</h3>
+                        <div class="definition">
+                            <strong>Consumer Surplus:</strong> Lợi ích nhận được bởi người tiêu dùng từ việc mua hàng
+                            dưới giá cân bằng
+                        </div>
+
+                        <div class="formula">
+                            <strong>CS = ∫_0^Q_eq [P_demand(Q) - P_eq] dQ</strong><br><br>
+                            Diện tích giữa đường cầu và giá cân bằng
+                        </div>
+
+                        <h3>📌 Producer Surplus</h3>
+                        <div class="definition">
+                            <strong>Producer Surplus:</strong> Lợi ích nhận được bởi nhà sản xuất từ việc bán hàng trên
+                            giá cân bằng
+                        </div>
+
+                        <div class="formula">
+                            <strong>PS = ∫_0^Q_eq [P_eq - P_supply(Q)] dQ</strong><br><br>
+                            Diện tích giữa giá cân bằng và đường cung
+                        </div>
+
+                        <h3>💻 Mô phỏng: Tính Consumer Surplus</h3>
+                        <div class="slider-group">
+                            <label>Intercept (a): <span id="su-a-val">100</span></label>
+                            <input type="range" id="su-a" min="50" max="200" value="100" step="10">
+                        </div>
+
+                        <div class="visual-demo">
+                            <svg class="svg-container" viewBox="0 0 450 300" preserveAspectRatio="xMidYMid meet">
+                                <g stroke="#e0e0e0" stroke-width="1">
+                                    <line x1="40" y1="250" x2="420" y2="250" />
+                                    <line x1="40" y1="20" x2="40" y2="250" />
+                                </g>
+                                <text x="425" y="255" font-size="12" fill="#666">Q</text>
+                                <text x="15" y="20" font-size="12" fill="#666">P</text>
+
+                                <!-- Demand -->
+                                <polyline id="su-demand" points="40,80 150,150 250,200 350,230" stroke="#2c5aa0"
+                                    stroke-width="2.5" fill="none" />
+
+                                <!-- Supply -->
+                                <polyline id="su-supply" points="40,230 150,180 250,130 350,80" stroke="#ff6b35"
+                                    stroke-width="2.5" fill="none" />
+
+                                <!-- Equilibrium -->
+                                <circle id="su-eq" cx="230" cy="165" r="3" fill="#04a777" />
+
+                                <!-- Consumer Surplus (shaded) -->
+                                <polygon id="su-cs-area" points="40,165 230,165 230,80 40,80" fill="#2c5aa0"
+                                    opacity="0.1" />
+
+                                <!-- Producer Surplus (shaded) -->
+                                <polygon id="su-ps-area" points="40,165 230,165 230,230 40,230" fill="#ff6b35"
+                                    opacity="0.1" />
+
+                                <text x="350" y="240" fill="#2c5aa0" font-weight="bold" font-size="11">Demand</text>
+                                <text x="300" y="100" fill="#ff6b35" font-weight="bold" font-size="11">Supply</text>
+                            </svg>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ tính toán</strong>
+                            <div class="step">
+                                <strong>Demand: P = 100 - Q</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Supply: P = 10 + Q</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Cân bằng: Q = 45, P = 55</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>CS = ∫_0^45 [(100 - Q) - 55] dQ = ∫_0^45 [45 - Q] dQ</strong><br>
+                                <strong>= [45Q - Q²/2]_0^45 = 2025 - 1012.5 = 1012.5</strong>
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>📌 Ý nghĩa thực tế:</strong> CS + PS = tổng lợi ích xã hội. Suy thoái thuế hoặc độc
+                            quyền làm giảm CS + PS (deadweight loss).
+                        </div>
+                    </div>
+
+                    <!-- OLS Regression -->
+                    <div class="lesson" id="lesson-ols-regression" style="display: none;">
+                        <h2>📊 OLS Regression Intuition</h2>
+
+                        <div class="definition">
+                            <strong>OLS (Ordinary Least Squares):</strong> Phương pháp tìm đường thẳng "tốt nhất" tương
+                            ứng với tập dữ liệu
+                        </div>
+
+                        <h3>📌 Mô hình tuyến tính</h3>
+                        <div class="formula">
+                            <strong>y = β₀ + β₁x + u</strong><br><br>
+                            β₀ = intercept<br>
+                            β₁ = slope<br>
+                            u = sai số (residual)
+                        </div>
+
+                        <h3>📌 Tiêu chí OLS</h3>
+                        <div class="concept-box highlight">
+                            <p><strong>Minimize: SSE = Σ(y_i - ŷ_i)²</strong></p>
+                            <p style="margin-top: 8px;">Tối thiểu hóa tổng bình phương sai số</p>
+                            <p style="margin-top: 8px;">Đây là ý tưởng cơ bản: tìm đường thẳng sao cho tổng khoảng cách
+                                (bình phương) từ điểm tới đường là nhỏ nhất</p>
+                        </div>
+
+                        <h3>📌 Công thức OLS</h3>
+                        <div class="formula">
+                            <strong>β₁ = Cov(x,y) / Var(x) = (Σ(x_i - x̄)(y_i - ȳ)) / Σ(x_i - x̄)²</strong><br><br>
+                            <strong>β₀ = ȳ - β₁·x̄</strong>
+                        </div>
+
+                        <h3>💻 Trực quan: Kéo điểm, xem đường fit</h3>
+                        <div class="slider-group">
+                            <label>Slope (β₁): <span id="ols-slope-val">1.5</span></label>
+                            <input type="range" id="ols-slope" min="0.5" max="3" value="1.5" step="0.1">
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Intercept (β₀): <span id="ols-intercept-val">10</span></label>
+                            <input type="range" id="ols-intercept" min="0" max="30" value="10" step="1">
+                        </div>
+
+                        <div class="visual-demo">
+                            <svg class="svg-container" viewBox="0 0 450 300" preserveAspectRatio="xMidYMid meet">
+                                <g stroke="#e0e0e0" stroke-width="1">
+                                    <line x1="40" y1="250" x2="420" y2="250" />
+                                    <line x1="40" y1="20" x2="40" y2="250" />
+                                </g>
+                                <text x="425" y="255" font-size="12" fill="#666">x</text>
+                                <text x="15" y="20" font-size="12" fill="#666">y</text>
+
+                                <!-- Data points (mock) -->
+                                <circle cx="80" cy="220" r="2" fill="#cccccc" opacity="0.7" />
+                                <circle cx="120" cy="190" r="2" fill="#cccccc" opacity="0.7" />
+                                <circle cx="160" cy="160" r="2" fill="#cccccc" opacity="0.7" />
+                                <circle cx="200" cy="130" r="2" fill="#cccccc" opacity="0.7" />
+                                <circle cx="240" cy="100" r="2" fill="#cccccc" opacity="0.7" />
+                                <circle cx="280" cy="70" r="2" fill="#cccccc" opacity="0.7" />
+                                <circle cx="320" cy="60" r="2" fill="#cccccc" opacity="0.7" />
+                                <circle cx="380" cy="40" r="2" fill="#cccccc" opacity="0.7" />
+
+                                <!-- Fitted line -->
+                                <line id="ols-line" x1="40" y1="220" x2="420" y2="80" stroke="#2c5aa0"
+                                    stroke-width="2.5" />
+
+                                <text x="300" y="100" fill="#2c5aa0" font-weight="bold" font-size="11">Fitted
+                                    line</text>
+                            </svg>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ: Thu nhập & Chi tiêu</strong>
+                            <div class="step">
+                                <strong>Dữ liệu: (Income, Spending)</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Hồi quy: Spending = β₀ + β₁·Income</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>Kết quả OLS:</strong> Spending = 50 + 0.8·Income<br>
+                                → 1 đơn vị thu nhập tăng → Chi tiêu tăng 0.8 đơn vị (MPC)
+                            </div>
+                        </div>
+
+                        <div class="insight">
+                            <strong>💡 R-squared (R²):</strong> Phần trăm phương sai của y được giải thích bởi x<br>
+                            0 ≤ R² ≤ 1 (R² càng gần 1 → Fit tốt)
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 OLS là nền tảng:</strong> Được dùng rộng rãi trong kinh tế lượng (econometrics)
+                            để ước lượng mối quan hệ giữa các biến.
+                        </div>
+                    </div>
+
+                    <!-- Hypothesis Testing -->
+                    <div class="lesson" id="lesson-hypothesis-testing" style="display: none;">
+                        <h2>🧪 Hypothesis Testing & p-value</h2>
+
+                        <div class="concept-box">
+                            <h3>Câu hỏi cơ bản</h3>
+                            <p><strong>Dữ liệu mẫu có hỗ trợ giả thuyết của tôi không?</strong></p>
+                            <p style="margin-top: 8px;">Ví dụ: Có phải lương của nam = lương của nữ không?</p>
+                        </div>
+
+                        <h3>📌 Thiết lập giả thuyết</h3>
+                        <div class="definition">
+                            <strong>H₀ (Null Hypothesis):</strong> Giả thuyết "không có hiệu ứng" (status quo)<br>
+                            <strong>H₁ (Alternative):</strong> Giả thuyết thay thế (cái chúng ta muốn chứng minh)
+                        </div>
+
+                        <div class="step">
+                            <strong>Ví dụ: Lương nam vs nữ</strong>
+                            <p style="margin: 8px 0 0 0;"><strong>H₀: μ_nam = μ_nữ</strong> (không có sự khác biệt)</p>
+                            <p><strong>H₁: μ_nam ≠ μ_nữ</strong> (có sự khác biệt)</p>
+                        </div>
+
+                        <h3>📌 p-value</h3>
+                        <div class="definition">
+                            <strong>p-value:</strong> Xác suất quan sát dữ liệu (hoặc cực đoan hơn) nếu H₀ là đúng
+                        </div>
+
+                        <div class="concept-box highlight">
+                            <p><strong>Nếu p-value nhỏ (< 0.05):</strong> Bác bỏ H₀ (chứng cứ mạnh mẽ)</p>
+                            <p style="margin: 8px 0 0 0;"><strong>Nếu p-value lớn (> 0.05):</strong> Không bác bỏ H₀
+                                (không đủ chứng cứ)</p>
+                        </div>
+
+                        <h3>📌 Quy trình Test</h3>
+                        <div class="step">
+                            <strong>1. Thiết lập H₀ và H₁</strong>
+                        </div>
+
+                        <div class="step">
+                            <strong>2. Tính test statistic</strong>
+                            <p style="margin: 8px 0 0 0;">Ví dụ: t-statistic = (x̄ - μ₀) / (s/√n)</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>3. Tính p-value</strong>
+                            <p style="margin: 8px 0 0 0;">Từ test statistic → Tra bảng phân phối</p>
+                        </div>
+
+                        <div class="step">
+                            <strong>4. So sánh với α (significance level = 0.05)</strong>
+                            <p style="margin: 8px 0 0 0;">p-value < α → Bác bỏ H₀</p>
+                        </div>
+
+                        <div class="example">
+                            <strong>✏️ Ví dụ cụ thể</strong>
+                            <div class="step">
+                                <strong>Giả thuyết: Lương nam (μ₁) > lương nữ (μ₂)</strong>
+                            </div>
+                            <div class="step">
+                                <strong>H₀: μ₁ = μ₂, H₁: μ₁ > μ₂</strong>
+                            </div>
+                            <div class="step">
+                                <strong>Mẫu: n₁ = 100 nam, x̄₁ = 30M; n₂ = 100 nữ, x̄₂ = 28M</strong>
+                            </div>
+                            <div class="step">
+                                <strong>t-statistic = 2.5, p-value = 0.006</strong>
+                            </div>
+                            <div class="example-output">
+                                <strong>Kết luận:</strong> p-value = 0.006 < 0.05<br>
+                                    → Bác bỏ H₀ → Có bằng chứng lương nam > nữ
+                            </div>
+                        </div>
+
+                        <h3>📌 Confidence Interval (CI)</h3>
+                        <div class="definition">
+                            <strong>95% CI:</strong> Khoảng giá trị mà tham số thực có 95% xác suất nằm trong đó
+                        </div>
+
+                        <div class="formula">
+                            <strong>CI = x̄ ± 1.96·(s/√n)</strong>
+                        </div>
+
+                        <div class="key-point">
+                            <strong>🎯 Liên hệ:</strong> Nếu H₀ (giá trị 0 chẳng hạn) nằm NGOÀI 95% CI → Bác bỏ H₀
+                            (tương ứng p-value < 0.05) </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
