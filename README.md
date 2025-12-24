@@ -71,14 +71,8 @@
 
 ## 🖼 Demo
 
-### Dashboard
-Giao diện chính với bảng điều khiển học tập, cho phép truy cập nhanh đến các module.
-
-### Interactive Charts
-Các biểu đồ SVG tương tác giúp visualize các khái niệm kinh tế.
-
-### Dark Mode
-Hỗ trợ chế độ tối để học tập thoải mái hơn vào ban đêm.
+### URL:
+https://econ-math-vn.vercel.app/
 
 ---
 
