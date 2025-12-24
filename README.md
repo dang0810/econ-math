@@ -71,7 +71,7 @@
 
 ## 🖼 Demo
 
-### URL:
+### URL
 https://econ-math-vn.vercel.app/
 
 ---
