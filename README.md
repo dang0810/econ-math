@@ -165,49 +165,11 @@ econlearn-hub/
 └── .gitignore           # Git ignore rules
 ```
 
----
 
-## 🤝 Đóng góp
-
-Mọi đóng góp đều được hoan nghênh! Vui lòng:
-
-1. **Fork** repository này
-2. Tạo **branch** mới: `git checkout -b feature/AmazingFeature`
-3. **Commit** changes: `git commit -m 'Add some AmazingFeature'`
-4. **Push** to branch: `git push origin feature/AmazingFeature`
-5. Mở **Pull Request**
-
-### Các đóng góp mong muốn
-- [ ] Thêm nhiều bài học hơn
-- [ ] Cải thiện visualization
-- [ ] Thêm quiz và bài test
-- [ ] Hỗ trợ đa ngôn ngữ (English)
-- [ ] Thêm progress tracking
-- [ ] Responsive improvements
 
 ---
 
-## 📄 License
 
-Dự án này được cấp phép theo [MIT License](./LICENSE).
-
----
-
-## 👨‍💻 Tác giả
-
-**EconLearn Hub Team**
-
-- 🌐 Website: [Coming Soon]
-- 📧 Email: [your-email@example.com]
-- 💼 LinkedIn: [Your LinkedIn]
-
----
-
-## 🙏 Cảm ơn
-
-- Cảm ơn tất cả sinh viên đã sử dụng và góp ý cho nền tảng
-- Inspiration from modern educational platforms
-- Icons from Emoji và Unicode
 
 ---
 
